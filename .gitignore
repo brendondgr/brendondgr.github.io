@@ -1,3 +1,7 @@
+# Personal ignores for this project.
+read_win.py
+dne
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
