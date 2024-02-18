@@ -51,10 +51,11 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'bdgrweb.urls'
 
+from os import path
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'bdgrweb' / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -66,6 +67,7 @@ TEMPLATES = [
         },
     },
 ]
+
 
 WSGI_APPLICATION = 'bdgrweb.wsgi.application'
 
