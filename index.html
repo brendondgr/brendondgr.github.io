@@ -1,0 +1,105 @@
+<div class="whole-page">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="bdgr-title tracking-in-expand">brendondgr</div>        
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div class="bdgr-subtitle text-focus-in">Welcome to my Website</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+    .whole-page {
+        background-color: #eae0d5;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center; /* Center vertically */
+        justify-content: center; /* Center horizontally */
+    }
+    
+    .bdgr-title {
+        font-size: 10em;
+        font-weight: bold;
+        font-family: 'Work Sans', sans-serif;
+        color: #000;
+        text-align: center;
+        color: #22333b;
+    }
+    
+    .bdgr-subtitle {
+        font-size: 2em;
+        font-weight: bold;
+        font-family: 'Work Sans', sans-serif;
+        color: #000;
+        text-align: center;
+        color: #5e503f;
+    }
+    
+    .tracking-in-expand {
+        animation: tracking-in-expand 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+      }
+    
+     @-webkit-keyframes tracking-in-expand {
+        0% {
+          letter-spacing: -0.5em;
+          opacity: 0;
+        }
+        40% {
+          opacity: 0.6;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+      @keyframes tracking-in-expand {
+        0% {
+          letter-spacing: -0.5em;
+          opacity: 0;
+        }
+        40% {
+          opacity: 0.6;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+      
+      .text-focus-in {
+        animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) 1s both;
+      }
+      
+    
+    @-webkit-keyframes text-focus-in {
+        0% {
+          -webkit-filter: blur(12px);
+                  filter: blur(12px);
+          opacity: 0;
+        }
+        100% {
+          -webkit-filter: blur(0px);
+                  filter: blur(0px);
+          opacity: 1;
+        }
+      }
+      @keyframes text-focus-in {
+        0% {
+          -webkit-filter: blur(12px);
+                  filter: blur(12px);
+          opacity: 0;
+        }
+        100% {
+          -webkit-filter: blur(0px);
+                  filter: blur(0px);
+          opacity: 1;
+        }
+      }
+</style>
