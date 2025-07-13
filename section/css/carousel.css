@@ -8,48 +8,67 @@ body {
   color: rgb(var(--bs-tertiary-color-rgb));
 }
 
-
 /* CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */
 
 /* Carousel base class */
 .carousel {
-  margin-bottom: 4rem;
+  margin-bottom: 0;
 }
-/* Since positioning the image, we need to help out the caption */
+
 .carousel-caption {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  /* width: 100%; */
   text-align: center;
   z-index: 10;
+  color: var(--text-color-light);
 }
 
-/* .carousel-control-prev,
-.carousel-control-next {
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-} */
-
-/* Declare heights because of positioning of img element */
 .carousel-item {
   height: 32rem;
+  background-color: var(--primary-color);
 }
 
+.carousel-control-prev,
+.carousel-control-next {
+    height: 100px;
+    width: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--tertiary-color);
+    border-radius: 8px;
+    margin: 0 1rem;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    background-color: var(--secondary-color);
+}
 
 /* MARKETING CONTENT
 -------------------------------------------------- */
+.btn {
+    background-color: var(--tertiary-color);
+    color: var(--text-color-dark);
+    border: none;
+}
+
+.btn:hover {
+    background-color: var(--secondary-color);
+    color: var(--text-color-light);
+}
 
 /* Center align the text within the three columns below the carousel */
-.marketing .col-lg-4 {
+.marketing .col-lg-4,
+#aboutme-container .col-lg-4 {
   margin-bottom: 1.5rem;
   text-align: center;
 }
 /* rtl:begin:ignore */
-.marketing .col-lg-4 p {
+.marketing .col-lg-4 p,
+#aboutme-container .col-lg-4 p {
   margin-right: .75rem;
   margin-left: .75rem;
 }
@@ -91,4 +110,29 @@ body {
   .featurette-heading {
     margin-top: 7rem;
   }
+} 
+
+#aboutme-container {
+  background-color: var(--background-cust);
+  color: var(--text-color-dark);
+  padding: 2rem 0;
+}
+
+#aboutme-container h1,
+#aboutme-container h2,
+#aboutme-container h4,
+#aboutme-container p {
+    color: var(--text-color-dark);
+}
+
+img, .bd-placeholder-img {
+    background-color: var(--primary-color);
+}
+
+.bd-placeholder-img rect {
+    fill: var(--primary-color);
+}
+
+.bd-placeholder-img text {
+    fill: var(--primary-color);
 } 

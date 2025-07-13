@@ -1,0 +1,12 @@
+/* Primary Color Palette */
+:root {
+    /* Green Themes */
+    --header-color: #333D29;
+    --primary-color: #555F44;
+    --secondary-color: #656D4A;
+    --tertiary-color: #A4AC86;
+    --quaternary-color: #C0C5AA;
+    --background-cust: #dcdece;
+    --text-color-light: #F5F5F5;
+    --text-color-dark: #000000;
+}

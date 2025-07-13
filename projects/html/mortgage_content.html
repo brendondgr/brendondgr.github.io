@@ -1,0 +1,145 @@
+<div class="main-card w-full p-6 md:p-10">
+    <!-- Tab Navigation -->
+    <div class="border-b border-gray-200 mb-8">
+        <nav class="flex -mb-px" id="tabContainer">
+            <button class="tab-btn active" data-tab="affordability">House Affordability</button>
+            <button class="tab-btn" data-tab="payment">Mortgage Payment</button>
+        </nav>
+    </div>
+
+    <!-- Tab Content -->
+    <!-- Affordability Calculator -->
+    <div id="affordabilityContent" class="tab-content active">
+        <div class="text-center mb-8">
+            <h1 class="text-3xl md:text-4xl font-bold text-gray-800">House Affordability Calculator</h1>
+            <p class="text-gray-500 mt-2">Estimate the home price you can afford based on your finances.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+                <label for="salary" class="block text-sm font-medium text-gray-700 mb-1">Annual Salary ($)</label>
+                <input type="number" id="salary" class="form-input w-full p-3 rounded-lg border-gray-300" placeholder="e.g., 90000" value="90000">
+            </div>
+            <div>
+                <label for="percentApplied" class="block text-sm font-medium text-gray-700 mb-1">% of Salary for Mortgage</label>
+                <input type="number" id="percentApplied" class="form-input w-full p-3 rounded-lg border-gray-300" placeholder="e.g., 28" value="28">
+            </div>
+            <div>
+                <label for="downPayment" class="block text-sm font-medium text-gray-700 mb-1">Down Payment (%)</label>
+                <input type="number" id="downPayment" class="form-input w-full p-3 rounded-lg border-gray-300" placeholder="e.g., 20" value="20">
+            </div>
+            <div>
+                <label for="interestRate" class="block text-sm font-medium text-gray-700 mb-1">Interest Rate (%)</label>
+                <input type="number" id="interestRate" step="0.01" class="form-input w-full p-3 rounded-lg border-gray-300" placeholder="e.g., 6.5" value="6.5">
+            </div>
+            <div class="md:col-span-2">
+                <label for="hoaInsurance" class="block text-sm font-medium text-gray-700 mb-1">Monthly HOA + Insurance ($)</label>
+                <input type="number" id="hoaInsurance" class="form-input w-full p-3 rounded-lg border-gray-300" placeholder="e.g., 500" value="500">
+            </div>
+        </div>
+        <div class="mt-8 text-center">
+            <button id="calculateBtnAffordability" class="calculate-btn">Calculate</button>
+        </div>
+        <div id="resultsAffordability" class="mt-8 hidden">
+            <div class="result-panel p-6 rounded-lg">
+                <div class="text-center">
+                    <p class="text-lg text-gray-600">You can afford a house up to:</p>
+                    <p id="housePriceResult" class="text-4xl md:text-5xl font-bold text-gray-800 my-2">$0</p>
+                    <p id="downPaymentResult" class="text-md text-gray-500">Based on a down payment of: $0</p>
+                </div>
+                <div class="mt-4 pt-4 border-t border-green-200 text-center">
+                     <p class="text-md text-gray-600">Based on your desired monthly payment of:</p>
+                     <p id="monthlyPaymentResult" class="text-2xl font-semibold text-gray-700 mt-1">$0</p>
+                </div>
+            </div>
+        </div>
+        <div id="errorAffordability" class="mt-6 hidden error-message p-4 rounded-lg"><p></p></div>
+    </div>
+
+    <!-- Mortgage Payment Calculator -->
+    <div id="paymentContent" class="tab-content">
+         <div class="text-center mb-8">
+            <h1 class="text-3xl md:text-4xl font-bold text-gray-800">Mortgage Payment Calculator</h1>
+            <p class="text-gray-500 mt-2">Calculate your monthly payment and see your amortization schedule.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-4">
+            <div>
+                <label for="homeValue" class="block text-sm font-medium text-gray-700 mb-1">Home Value ($)</label>
+                <input type="number" id="homeValue" class="form-input w-full p-3 rounded-lg border-gray-300" value="500000">
+            </div>
+            <div>
+                <label for="downPaymentPayment" class="block text-sm font-medium text-gray-700 mb-1">Down Payment ($)</label>
+                <input type="number" id="downPaymentPayment" class="form-input w-full p-3 rounded-lg border-gray-300" value="100000">
+            </div>
+            <div>
+                <label for="loanAmount" class="block text-sm font-medium text-gray-700 mb-1">Loan Amount ($)</label>
+                <input type="number" id="loanAmount" class="form-input w-full p-3 rounded-lg bg-gray-100" readonly>
+            </div>
+            <div>
+                <label for="interestRatePayment" class="block text-sm font-medium text-gray-700 mb-1">Interest Rate (%)</label>
+                <input type="number" id="interestRatePayment" step="0.01" class="form-input w-full p-3 rounded-lg border-gray-300" value="6.5">
+            </div>
+             <div>
+                <label for="loanTerm" class="block text-sm font-medium text-gray-700 mb-1">Loan Term (Years)</label>
+                <select id="loanTerm" class="form-input w-full p-3 rounded-lg border-gray-300">
+                    <option>30</option>
+                    <option>20</option>
+                    <option>15</option>
+                    <option>10</option>
+                </select>
+            </div>
+            <div>
+                <label for="startDate" class="block text-sm font-medium text-gray-700 mb-1">Start Date</label>
+                <input type="month" id="startDate" class="form-input w-full p-3 rounded-lg border-gray-300">
+            </div>
+            <div>
+                <label for="propertyTax" class="block text-sm font-medium text-gray-700 mb-1">Property Tax ($/year)</label>
+                <input type="number" id="propertyTax" class="form-input w-full p-3 rounded-lg border-gray-300" value="4000">
+            </div>
+             <div>
+                <label for="insurance" class="block text-sm font-medium text-gray-700 mb-1">Insurance ($/year)</label>
+                <input type="number" id="insurance" class="form-input w-full p-3 rounded-lg border-gray-300" value="1500">
+            </div>
+             <div class="md:col-span-2">
+                <label for="monthlyHOA" class="block text-sm font-medium text-gray-700 mb-1">Monthly HOA ($)</label>
+                <input type="number" id="monthlyHOA" class="form-input w-full p-3 rounded-lg border-gray-300" value="0">
+            </div>
+        </div>
+        <div class="mt-8 text-center">
+            <button id="calculateBtnPayment" class="calculate-btn">Calculate</button>
+        </div>
+        <div id="resultsPayment" class="mt-8 hidden">
+            <div class="text-center p-6 bg-indigo-50 rounded-lg">
+                <p class="text-lg text-gray-600">Your Estimated Monthly Payment:</p>
+                <p id="totalMonthlyPaymentResult" class="text-4xl md:text-5xl font-bold text-indigo-700 my-2">$0</p>
+            </div>
+            <!-- Chart View Toggle -->
+            <div class="mt-8 flex justify-center items-center space-x-4">
+                <span id="monthlyToggleLabel" class="text-sm font-medium text-indigo-600">Monthly</span>
+                <label for="viewToggle" class="relative inline-flex items-center cursor-pointer">
+                    <input type="checkbox" id="viewToggle" class="sr-only peer">
+                    <div class="w-11 h-6 bg-gray-200 rounded-full peer peer-focus:ring-2 peer-focus:ring-indigo-300 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-indigo-600"></div>
+                </label>
+                <span id="annualToggleLabel" class="text-sm font-medium text-gray-500">Annual</span>
+            </div>
+            <div class="mt-4 h-96">
+                <canvas id="amortizationChart"></canvas>
+            </div>
+            <!-- Schedule Controls -->
+            <div class="mt-8 flex justify-center items-center space-x-4">
+                <button id="toggleTableBtn" class="calculate-btn bg-gray-600 hover:bg-gray-700 text-sm">Show Schedule</button>
+                <button id="downloadCsvBtn" class="calculate-btn bg-green-600 hover:bg-green-700 text-sm">Download Table</button>
+            </div>
+            <!-- Schedule Table -->
+            <div id="tableContainerWrapper" class="mt-4 overflow-x-auto hidden">
+                <h3 class="text-xl font-bold text-center mb-4 text-gray-800">Amortization Schedule</h3>
+                <table class="min-w-full text-sm text-left text-gray-500 amortization-table">
+                    <thead id="amortizationTableHead" class="text-xs text-gray-700 uppercase">
+                    </thead>
+                    <tbody id="amortizationTableBody">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div id="errorPayment" class="mt-6 hidden error-message p-4 rounded-lg"><p></p></div>
+    </div>
+</div>
