@@ -3,80 +3,134 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects - brendondgr</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Bootstrap Icons -->
+    <title>Brendondgr's Projects</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap Icons (as you had it before) -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/projects.css">
-    <link rel="stylesheet" href="css/colors.css">
-</head>
-<body>
 
+    <style>
+        /* Use Inter as the default font */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+
+    <!-- This container will be populated by your projects.js -->
     <div id="navbar-container"></div>
 
-    <div class="hero-section text-center">
-        <div class="container">
-            <h1 class="display-5 fw-bold">My Projects</h1>
-            <div class="col-lg-6 mx-auto">
-                <p class="lead mb-4">Here you can find a selection of my work. These projects range from university assignments to personal endeavors, showcasing my skills in software development and research.</p>
-            </div>
-        </div>
+    <!-- Main Content -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- Hero Section -->
+        <header class="text-center pt-24 pb-12 md:pt-32 md:pb-16">
+            <h1 class="text-4xl md:text-5xl font-bold tracking-tight text-slate-900">
+                My Work &amp; Projects
+            </h1>
+            <p class="mt-4 max-w-2xl mx-auto text-lg text-slate-600">
+                A collection of projects I've built. These range from university assignments to personal endeavors, showcasing my skills in software development and research.
+            </p>
+        </header>
+
+        <!-- Projects Grid -->
+        <main class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pb-24">
+
+            <!-- Project 1: Mortgage Calculator -->
+            <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 group">
+                <img class="w-full h-48 object-cover" src="images/mortgage.jpg" alt="Mortgage Calculator project image" onerror="this.onerror=null;this.src='https://placehold.co/600x400/e2e8f0/475569?text=Image+Not+Found';">
+                <div class="h-[300px] flex flex-col">
+                    <div class="p-6 flex-grow">
+                        <div class="flex items-center justify-between">
+                            <h3 class="text-xl font-semibold text-slate-900">Mortgage Calculator</h3>
+                            <div class="flex space-x-2">
+                                <span class="inline-block px-2 py-1 text-xs font-semibold text-green-800 bg-green-100 rounded-full">JS</span>
+                                <span class="inline-block px-2 py-1 text-xs font-semibold text-sky-800 bg-sky-100 rounded-full">Tailwind</span>
+                            </div>
+                        </div>
+                        <p class="mt-3 text-slate-600 text-sm leading-relaxed">
+                            Calculates the amortization schedule for a mortgage and estimates the house price you can afford. Originally built in Python, it was rewritten in JavaScript with a Tailwind CSS interface.
+                        </p>
+                    </div>
+                    <footer class="bg-slate-50 px-6 py-4 flex items-center justify-end space-x-4">
+                        <a href="https://github.com/brendondgr/brendondgr.github.io/blob/main/projects/javascript/mortgage.js" class="text-sm font-medium text-slate-600 hover:text-indigo-600 transition-colors duration-200" title="View Source Code">
+                            <i class="bi bi-github"></i> Source Code
+                        </a>
+                        <a href="../projects/mortgage.html" class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" title="View Project">
+                            View Project <i class="bi bi-box-arrow-up-right ml-2"></i>
+                        </a>
+                    </footer>
+                </div>
+            </article>
+
+            <!-- Project 2: Placeholder -->
+            <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 group">
+                <img class="w-full h-48 object-cover" src="https://placehold.co/600x400/334155/FFFFFF?text=Project+Two" alt="Placeholder for Project 2" onerror="this.onerror=null;this.src='https://placehold.co/600x400/e2e8f0/475569?text=Image+Not+Found';">
+                <div class="h-[300px] flex flex-col">
+                    <div class="p-6 flex-grow">
+                        <div class="flex items-center justify-between">
+                            <h3 class="text-xl font-semibold text-slate-900">Project Title 2</h3>
+                            <div class="flex space-x-2">
+                                <span class="inline-block px-2 py-1 text-xs font-semibold text-purple-800 bg-purple-100 rounded-full">Python</span>
+                                <span class="inline-block px-2 py-1 text-xs font-semibold text-orange-800 bg-orange-100 rounded-full">Flask</span>
+                            </div>
+                        </div>
+                        <p class="mt-3 text-slate-600 text-sm leading-relaxed">
+                            This is a short description of the second project. It highlights the key features and technologies used. More details will be added soon.
+                        </p>
+                    </div>
+                    <footer class="bg-slate-50 px-6 py-4 flex items-center justify-end space-x-4">
+                        <a href="#" class="text-sm font-medium text-slate-600 hover:text-indigo-600 transition-colors duration-200" title="View Source Code">
+                            <i class="bi bi-github"></i> Source Code
+                        </a>
+                        <a href="#" class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" title="View Project">
+                            View Project <i class="bi bi-box-arrow-up-right ml-2"></i>
+                        </a>
+                    </footer>
+                </div>
+            </article>
+
+            <!-- Project 3: Placeholder -->
+            <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 group">
+                <img class="w-full h-48 object-cover" src="https://placehold.co/600x400/166534/FFFFFF?text=Project+Three" alt="Placeholder for Project 3" onerror="this.onerror=null;this.src='https://placehold.co/600x400/e2e8f0/475569?text=Image+Not+Found';">
+                <div class="h-[300px] flex flex-col">
+                    <div class="p-6 flex-grow">
+                        <div class="flex items-center justify-between">
+                            <h3 class="text-xl font-semibold text-slate-900">Project Title 3</h3>
+                            <div class="flex space-x-2">
+                                <span class="inline-block px-2 py-1 text-xs font-semibold text-blue-800 bg-blue-100 rounded-full">React</span>
+                                <span class="inline-block px-2 py-1 text-xs font-semibold text-pink-800 bg-pink-100 rounded-full">Firebase</span>
+                            </div>
+                        </div>
+                        <p class="mt-3 text-slate-600 text-sm leading-relaxed">
+                            This is a short description of the third project. It highlights the key features and technologies used. More details will be added soon.
+                        </p>
+                    </div>
+                    <footer class="bg-slate-50 px-6 py-4 flex items-center justify-end space-x-4">
+                        <a href="#" class="text-sm font-medium text-slate-600 hover:text-indigo-600 transition-colors duration-200" title="View Source Code">
+                            <i class="bi bi-github"></i> Source Code
+                        </a>
+                        <a href="#" class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" title="View Project">
+                            View Project <i class="bi bi-box-arrow-up-right ml-2"></i>
+                        </a>
+                    </footer>
+                </div>
+            </article>
+
+        </main>
     </div>
 
-    <main class="container">
-        <!-- Projects Section -->
-        <div class="mt-5">
-            <!-- Project 1 -->
-            <div class="row mb-4 project-row">
-                <div class="col-md-auto">
-                    <img src="images/mortgage.jpg" class="project-img" alt="Mortgage Calculator">
-                </div>
-                <div class="col-md">
-                    <h3>Mortgage Calculator</h3>
-                    <p>Calculates the amortization schedule for a mortgage, as well as the approximate house price you can afford. Originally built in Python, it was re-written into JavaScript. The interface was built with Tailwind CSS, with the help of Google Gemini.</p>
-                </div>
-                <div class="col-auto d-flex flex-column align-items-center">
-                    <a href="../projects/mortgage.html" class="btn btn-primary btn-sm mb-1" title="View Project"><i class="bi bi-box-arrow-up-right"></i></a>
-                    <!-- <a href="#" class="btn btn-secondary btn-sm" title="Source Code"><i class="bi bi-github"></i></a> -->
-                    <small class="text-muted mt-1">X Views</small>
-                </div>
-            </div>
-            <!-- Project 2 -->
-            <div class="row mb-4 project-row">
-                <div class="col-md-auto">
-                    <img src="https://via.placeholder.com/150x150" class="project-img" alt="Project 2 Placeholder">
-                </div>
-                <div class="col-md">
-                    <h3>Project Title 2</h3>
-                    <p>This is a short description of the second project. It highlights the key features and technologies used. I will fill this in with more details later.</p>
-                </div>
-                <div class="col-auto d-flex flex-column align-items-center">
-                    <a href="#" class="btn btn-primary btn-sm mb-1" title="View Project"><i class="bi bi-box-arrow-up-right"></i></a>
-                    <!-- <a href="#" class="btn btn-secondary btn-sm" title="Source Code"><i class="bi bi-github"></i></a> -->
-                    <small class="text-muted mt-1">X Views</small>
-                </div>
-            </div>
-            <!-- Project 3 -->
-            <div class="row mb-4 project-row">
-                <div class="col-md-auto">
-                    <img src="https://via.placeholder.com/150x150" class="project-img" alt="Project 3 Placeholder">
-                </div>
-                <div class="col-md">
-                    <h3>Project Title 3</h3>
-                    <p>This is a short description of the third project. It highlights the key features and technologies used. I will fill this in with more details later.</p>
-                </div>
-                <div class="col-auto d-flex flex-column align-items-center">
-                    <a href="#" class="btn btn-primary btn-sm mb-1" title="View Project"><i class="bi bi-box-arrow-up-right"></i></a>
-                    <!-- <a href="#" class="btn btn-secondary btn-sm" title="Source Code"><i class="bi bi-github"></i></a> -->
-                    <small class="text-muted mt-1">X Views</small>
-                </div>
-            </div>
-        </div>
-    </main>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Your existing JS files -->
+    <!-- Note: You might need a 'utils.js' if it contains shared functions -->
+    <!-- <script src="javascript/utils.js"></script> -->
     <script src="javascript/projects.js"></script>
 </body>
 </html>

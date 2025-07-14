@@ -1,0 +1,22 @@
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f8fafc; /* slate-50 */
+    color: #0f172a; /* slate-900 */
+}
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+.typing-cursor {
+    border-right: .15em solid #60a5fa; /* blue-400 */
+    animation: blink-caret .75s step-end infinite;
+}
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #60a5fa; } /* blue-400 */
+} 

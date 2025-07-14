@@ -1,28 +1,42 @@
-<header>
-    <link rel="stylesheet" href="../section/css/colors.css">
-    <link rel="stylesheet" href="../section/css/navbar.css">
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-      <div class="container-fluid">
-        <a class="navbar-brand fw-bold fs-4" href="../index.html">brendondgr</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-          <ul class="navbar-nav me-auto mb-2 mb-md-0">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="javascript:window.location.pathname.includes('projects.html') ? window.location.reload() : window.location.href='section/projects.html'">Projects</a>
-            </li>
-          </ul>
-          <div class="d-flex">
-            <a class="nav-link mx-2" href="https://github.com/brendondgr" aria-label="GitHub" target="_blank"><i class="bi bi-github fs-4"></i></a>
-            <a class="nav-link mx-2" href="https://www.linkedin.com/in/brendon-gutierrez-670854285/" aria-label="LinkedIn" target="_blank"><i class="bi bi-linkedin fs-4"></i></a>
-            <a class="nav-link mx-2" href="https://www.youtube.com/@Brendeetoh" aria-label="YouTube" target="_blank"><i class="bi bi-youtube fs-4"></i></a>
-            <a class="nav-link mx-2" href="mailto:brendondgr@gmail.com" aria-label="Email"><i class="bi bi-envelope-fill fs-4"></i></a>
-          </div>
+<nav class="bg-gray-900 text-white fixed top-0 left-0 w-full z-50 shadow-md">
+    <div class="max-w-screen-xl mx-auto px-4">
+        <div class="flex justify-between items-center py-4">
+            <!-- Brand -->
+            <a href="../index.html" class="text-2xl font-bold">brendondgr</a>
+
+            <!-- Desktop Nav -->
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="../index.html" class="hover:text-blue-400 transition-colors">Home</a>
+                <a href="../section/projects.html" class="hover:text-blue-400 transition-colors">Projects</a>
+            </div>
+
+            <!-- Social Links -->
+            <div class="hidden md:flex items-center space-x-4">
+                <a class="hover:text-blue-400 transition-colors" href="https://github.com/brendondgr" aria-label="GitHub" target="_blank"><i class="bi bi-github text-xl"></i></a>
+                <a class="hover:text-blue-400 transition-colors" href="https://www.linkedin.com/in/brendon-gutierrez-670854285/" aria-label="LinkedIn" target="_blank"><i class="bi bi-linkedin text-xl"></i></a>
+                <a class="hover:text-blue-400 transition-colors" href="https://www.youtube.com/@Brendeetoh" aria-label="YouTube" target="_blank"><i class="bi bi-youtube text-xl"></i></a>
+                <a class="hover:text-blue-400 transition-colors" href="mailto:brendondgr@gmail.com" aria-label="Email"><i class="bi bi-envelope-fill text-xl"></i></a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-white focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
         </div>
-      </div>
-    </nav>
-  </header>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden px-4 pt-2 pb-4 space-y-2">
+        <a href="/index.html" class="block hover:text-blue-400 transition-colors">Home</a>
+        <a href="/section/projects.html" class="block hover:text-blue-400 transition-colors">Projects</a>
+        <div class="border-t border-gray-700 my-2"></div>
+        <div class="flex items-center space-x-4">
+             <a class="hover:text-blue-400 transition-colors" href="https://github.com/brendondgr" aria-label="GitHub" target="_blank"><i class="bi bi-github text-xl"></i></a>
+             <a class="hover:text-blue-400 transition-colors" href="https://www.linkedin.com/in/brendon-gutierrez-670854285/" aria-label="LinkedIn" target="_blank"><i class="bi bi-linkedin text-xl"></i></a>
+             <a class="hover:text-blue-400 transition-colors" href="https://www.youtube.com/@Brendeetoh" aria-label="YouTube" target="_blank"><i class="bi bi-youtube text-xl"></i></a>
+             <a class="hover:text-blue-400 transition-colors" href="mailto:brendondgr@gmail.com" aria-label="Email"><i class="bi bi-envelope-fill text-xl"></i></a>
+        </div>
+    </div>
+</nav> 
