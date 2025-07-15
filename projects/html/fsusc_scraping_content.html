@@ -1,0 +1,166 @@
+<header class="text-center mb-12">
+    <h1 class="text-4xl md:text-5xl font-bold text-gray-900">FSUSC Website Scraper</h1>
+    <p class="mt-4 text-lg text-gray-600">A tool for crawling and processing the FSU Scientific Computing department website.</p>
+</header>
+
+<!-- Description Section -->
+<section id="description" class="mb-12">
+    <h2 class="text-3xl font-bold text-gray-900 border-b-2 border-blue-500 pb-2 mb-6">Description</h2>
+    <p class="text-base leading-relaxed">This project is designed to scrape the Florida State University Scientific Computing (FSUSC) department website. It uses a combination of Scrapy and BeautifulSoup to crawl the site and extract textual content from its pages. The primary goal is to gather and structure this information so it can be effectively used as a knowledge base for a Retrieval-Augmented Generation (RAG) model.</p>
+    <p class="text-base leading-relaxed mt-4">After the raw data is scraped, it is processed using the Google Gemini 2.5 Flash API to refine and clean the data, ensuring it is in a structured and easily interpretable format for the Language Model.</p>
+</section>
+
+<!-- Data Files Section -->
+<section id="data-files" class="mb-12">
+    <h2 class="text-3xl font-bold text-gray-900 border-b-2 border-blue-500 pb-2 mb-6">Project Files</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Raw Data -->
+        <a href="https://github.com/brendondgr/FSUSC-scraping/tree/main/raw_data" target="_blank" class="block p-6 bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+            <h3 class="text-xl font-semibold text-gray-900 flex items-center gap-2">
+                Raw Data
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-gray-400"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+            </h3>
+            <p class="text-gray-600 mt-2">Access the unprocessed, raw text files scraped directly from the website.</p>
+        </a>
+        <!-- Refined Data -->
+        <a href="https://github.com/brendondgr/FSUSC-scraping/tree/main/refined_data" target="_blank" class="block p-6 bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+            <h3 class="text-xl font-semibold text-gray-900 flex items-center gap-2">
+                Refined Data
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-gray-400"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+            </h3>
+            <p class="text-gray-600 mt-2">View the structured data refined by the Gemini API, available in LaTeX and plain text formats.</p>
+        </a>
+        <!-- Final PDF -->
+        <a href="https://github.com/brendondgr/FSUSC-scraping/blob/main/tex/fsusc_combined.pdf" target="_blank" class="block p-6 bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+            <h3 class="text-xl font-semibold text-gray-900 flex items-center gap-2">
+                Download PDF
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-gray-400"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+            </h3>
+            <p class="text-gray-600 mt-2">Download the final, combined document in PDF format. (264 Pages)</p>
+        </a>
+    </div>
+</section>
+
+<!-- Installation Section -->
+<section id="installation" class="mb-12">
+    <h2 class="text-3xl font-bold text-gray-900 border-b-2 border-blue-500 pb-2 mb-6">Installation</h2>
+    <div class="space-y-8">
+        <div>
+            <h3 class="text-xl font-semibold mb-2">1. Create a Conda environment:</h3>
+            <p class="text-gray-600 mb-3">These instructions use Conda for environment management.</p>
+            <div class="code-block relative bg-gray-800 rounded-lg p-4 pr-16 text-white font-mono text-sm">
+                <code>conda create -n fsusc_scrape python=3.10</code>
+                <button class="copy-btn absolute top-1/2 right-3 -translate-y-1/2 bg-gray-700 hover:bg-gray-600 text-white py-1 px-2 rounded-md text-xs">
+                    <span class="copy-text">Copy</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="copy-check hidden text-green-400"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </button>
+            </div>
+        </div>
+        <div>
+            <h3 class="text-xl font-semibold mb-2">2. Activate the environment:</h3>
+            <div class="code-block relative bg-gray-800 rounded-lg p-4 pr-16 text-white font-mono text-sm">
+                <code>conda activate fsusc_scrape</code>
+                <button class="copy-btn absolute top-1/2 right-3 -translate-y-1/2 bg-gray-700 hover:bg-gray-600 text-white py-1 px-2 rounded-md text-xs">
+                    <span class="copy-text">Copy</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="copy-check hidden text-green-400"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </button>
+            </div>
+        </div>
+        <div>
+            <h3 class="text-xl font-semibold mb-2">3. Install dependencies:</h3>
+            <div class="code-block relative bg-gray-800 rounded-lg p-4 pr-16 text-white font-mono text-sm">
+                <code>pip install -r requirements.txt</code>
+                <button class="copy-btn absolute top-1/2 right-3 -translate-y-1/2 bg-gray-700 hover:bg-gray-600 text-white py-1 px-2 rounded-md text-xs">
+                   <span class="copy-text">Copy</span>
+                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="copy-check hidden text-green-400"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </button>
+            </div>
+        </div>
+        <div>
+            <h3 class="text-xl font-semibold mb-2">4. Set API Key:</h3>
+            <p class="text-gray-600">Create a file named <code class="bg-gray-200 text-sm p-1 rounded">api_key.txt</code> in the root directory and place your Google Gemini API key inside it.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Usage Section -->
+<section id="usage" class="mb-12">
+    <h2 class="text-3xl font-bold text-gray-900 border-b-2 border-blue-500 pb-2 mb-6">Usage</h2>
+    <p class="text-base leading-relaxed mb-6">The main script for running the scraper is <code class="bg-gray-200 text-sm p-1 rounded">main.py</code>. You can modify its behavior using the following command-line parameters.</p>
+    
+    <div class="bg-white p-6 rounded-lg shadow-md">
+        <h3 class="text-2xl font-bold text-gray-900 mb-4">Parameters</h3>
+        <ul class="space-y-6">
+            <li class="border-b border-gray-200 pb-4">
+                <p><code class="font-mono text-blue-600 bg-blue-50 p-1 rounded">--starting-url</code></p>
+                <p class="text-gray-600 mt-2">The URL where the scraper will begin.</p>
+                <p class="text-sm text-gray-500 mt-1"><strong>Type:</strong> string, <strong>Default:</strong> https://www.sc.fsu.edu/</p>
+            </li>
+            <li class="border-b border-gray-200 pb-4">
+                <p><code class="font-mono text-blue-600 bg-blue-50 p-1 rounded">--depth</code></p>
+                <p class="text-gray-600 mt-2">Specifies the maximum depth to crawl from the starting URL.</p>
+                <p class="text-sm text-gray-500 mt-1"><strong>Type:</strong> integer, <strong>Default:</strong> 2</p>
+            </li>
+            <li class="border-b border-gray-200 pb-4">
+                <p><code class="font-mono text-blue-600 bg-blue-50 p-1 rounded">--replace-urls</code></p>
+                <p class="text-gray-600 mt-2">If included, the existing <code class="bg-gray-200 text-sm p-1 rounded">urls.txt</code> file will be deleted before the scrape begins.</p>
+                <p class="text-sm text-gray-500 mt-1"><strong>Type:</strong> boolean (flag)</p>
+            </li>
+             <li class="border-b border-gray-200 pb-4">
+                <p><code class="font-mono text-blue-600 bg-blue-50 p-1 rounded">--get-raw-data</code></p>
+                <p class="text-gray-600 mt-2">If included, the scraper will run and extract the raw text from the web pages.</p>
+                <p class="text-sm text-gray-500 mt-1"><strong>Type:</strong> boolean (flag)</p>
+            </li>
+            <li>
+                <p><code class="font-mono text-blue-600 bg-blue-50 p-1 rounded">--refine-data</code></p>
+                <p class="text-gray-600 mt-2">If included, the script will process files in <code class="bg-gray-200 text-sm p-1 rounded">raw_data/</code> using the Gemini API.</p>
+                <p class="text-sm text-gray-500 mt-1"><strong>Type:</strong> boolean (flag)</p>
+            </li>
+        </ul>
+    </div>
+
+    <h3 class="text-2xl font-bold text-gray-900 mt-8 mb-4">Running the Scraper</h3>
+    <p class="mb-3">To run the scraper with default settings:</p>
+    <div class="code-block relative bg-gray-800 rounded-lg p-4 pr-16 text-white font-mono text-sm">
+        <code>python main.py</code>
+        <button class="copy-btn absolute top-1/2 right-3 -translate-y-1/2 bg-gray-700 hover:bg-gray-600 text-white py-1 px-2 rounded-md text-xs">
+            <span class="copy-text">Copy</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="copy-check hidden text-green-400"><polyline points="20 6 9 17 4 12"></polyline></svg>
+        </button>
+    </div>
+    <p class="mt-6 mb-3">To run with custom parameters:</p>
+     <div class="code-block relative bg-gray-800 rounded-lg p-4 pr-16 text-white font-mono text-sm">
+        <code>python main.py --starting-url &lt;YOUR_URL&gt; --depth &lt;YOUR_DEPTH&gt; --replace-urls</code>
+        <button class="copy-btn absolute top-1/2 right-3 -translate-y-1/2 bg-gray-700 hover:bg-gray-600 text-white py-1 px-2 rounded-md text-xs">
+            <span class="copy-text">Copy</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="copy-check hidden text-green-400"><polyline points="20 6 9 17 4 12"></polyline></svg>
+        </button>
+    </div>
+</section>
+
+<!-- Project Structure Section -->
+<section id="project-structure">
+    <h2 class="text-3xl font-bold text-gray-900 border-b-2 border-blue-500 pb-2 mb-6">Project Structure</h2>
+    <div class="bg-gray-800 rounded-lg p-4 text-white font-mono text-sm overflow-x-auto">
+        <pre>
+.
+├── main.py
+├── code/
+│   ├── __init__.py
+│   ├── scrape.py
+│   ├── extract.py
+│   └── gemini.py
+├── raw_data/
+├── readme.md
+├── refined_data/
+│   ├── LaTeX/
+│   └── Non-LaTeX/
+├── requirements.txt
+├── tests/
+│   └── gemini.ipynb
+└── tex/
+    ├── fsusc_combined.pdf
+    └── fsusc_combined.tex
+                </pre>
+    </div>
+</section> 
