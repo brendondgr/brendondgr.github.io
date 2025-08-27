@@ -1,0 +1,21 @@
+/* Use the Inter font family */
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Define school color themes using CSS variables */
+.school-fsu {
+    --school-primary: #782F40; /* FSU Garnet */
+    --school-secondary: #CEB888; /* FSU Gold */
+}
+
+.school-udel {
+    --school-primary: #00539F; /* UD Blue */
+    --school-secondary: #FFD200; /* UD Gold */
+}
+
+/* Default theme for unknown schools */
+.school-default {
+    --school-primary: #4B5563; /* Gray */
+    --school-secondary: #D1D5DB; /* Lighter Gray */
+} 
