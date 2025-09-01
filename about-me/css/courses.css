@@ -14,8 +14,23 @@ body {
     --school-secondary: #FFD200; /* UD Gold */
 }
 
+.school-jhu {
+    --school-primary: #68ACE5; /* Johns Hopkins Blue */
+}
+
+.school-mit {
+    --school-primary: #750014; /* MIT Red */
+    --school-secondary: #8B959E; /* MIT Grey */
+}
+
+.school-wharton {
+    --school-primary: #011F5B; /* Wharton Blue */
+    --school-secondary: #990000; /* Wharton Red */
+} 
+
 /* Default theme for unknown schools */
 .school-default {
     --school-primary: #4B5563; /* Gray */
     --school-secondary: #D1D5DB; /* Lighter Gray */
 } 
+
