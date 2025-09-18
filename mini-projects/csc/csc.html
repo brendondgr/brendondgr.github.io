@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prestige Retractable Awning | SunShield Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="csc_css.css">
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <main class="container mx-auto px-6 py-12">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+            <!-- Image Carousel Column -->
+            <div class="w-full space-y-6">
+                 <div id="carousel" class="relative carousel-container bg-gray-200 rounded-lg overflow-hidden shadow-lg">
+                    <!-- Images will be dynamically inserted here by JavaScript -->
+                    <button id="prevBtn" class="absolute left-4 top-1/2 -translate-y-1/2 bg-white/70 p-2 rounded-full hover:bg-white transition z-10">
+                        <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                    </button>
+                    <button id="nextBtn" class="absolute right-4 top-1/2 -translate-y-1/2 bg-white/70 p-2 rounded-full hover:bg-white transition z-10">
+                        <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                    </button>
+                </div>
+                <!-- Small screen placeholder for colors -->
+                <div id="smallScreenPlaceholder"></div>
+            </div>
+
+            <!-- Product Details & Actions -->
+            <div class="space-y-6">
+                <h1 class="text-4xl font-bold tracking-tight text-gray-900">Prestige Retractable Awning</h1>
+
+                <div class="flex justify-between items-center">
+                     <p id="productPrice" class="text-3xl text-indigo-600 font-semibold"></p>
+                     <span id="productSku" class="text-sm text-gray-500 font-mono"></span>
+                </div>
+
+                <p class="text-lg text-gray-600 leading-relaxed">
+                    Experience the perfect blend of style and function. Our premium retractable awning provides on-demand shade, protecting you from the elements while enhancing your outdoor living space. Built with marine-grade fabric and a robust aluminum frame for lasting durability.
+                </p>
+                
+                <!-- Size & Quantity -->
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 items-end">
+                    <div class="sm:col-span-2">
+                        <label for="size" class="text-lg font-semibold text-gray-800 mb-2 block">Size:</label>
+                        <select id="size" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500">
+                            <!-- Size options will be dynamically inserted here -->
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="text-lg font-semibold text-gray-800 mb-2 block">Quantity:</label>
+                        <div class="flex items-center border border-gray-300 rounded-lg">
+                            <button id="quantityMinus" class="px-4 py-3 text-lg font-semibold text-gray-600 hover:bg-gray-100 rounded-l-lg">-</button>
+                            <span id="quantity" class="w-full text-center px-2 py-3 text-lg font-semibold">1</span>
+                            <button id="quantityPlus" class="px-4 py-3 text-lg font-semibold text-gray-600 hover:bg-gray-100 rounded-r-lg">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Add to Cart -->
+                <button class="w-full bg-indigo-600 text-white font-semibold py-3 px-8 rounded-lg shadow-md hover:bg-indigo-700 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                    Add to Cart
+                </button>
+            </div>
+        </div>
+        
+        <!-- This is the color panel that will be moved by JS -->
+        <div id="colorPanelWrapper" class="hidden mt-3">
+            <h3 class="text-lg font-semibold text-gray-800 mb-2">Color: <span id="selectedColorName" class="font-normal">Forest Green</span></h3>
+            <div id="colorContainer">
+                <div id="colorSelector" class="grid gap-3">
+                    <!-- Color buttons will be dynamically inserted here -->
+                </div>
+                 <div id="hiddenColors" class="grid gap-3 mt-3">
+                    <!-- Hidden color buttons will be inserted here -->
+                </div>
+            </div>
+            <button id="toggleColorsBtn" class="w-full mt-4 text-center text-white font-semibold py-2 px-4 rounded-lg bg-indigo-500 hover:bg-indigo-600 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                Show All Colors
+            </button>
+        </div>
+
+        <!-- Large screen placeholder for colors -->
+        <div id="largeScreenPlaceholder" class="mt-3"></div>
+
+        <!-- Product Information Accordion -->
+        <div class="mt-16 pt-8 border-t border-gray-200">
+            <div class="lg:grid lg:grid-cols-2 lg:gap-8">
+             <!-- Product Details -->
+                <div class="border-b lg:border-b-0 border-gray-200 py-6">
+                <h2>
+                        <button class="accordion-button active flex justify-between items-center w-full text-lg font-semibold text-left text-gray-800 hover:text-indigo-600">
+                        <span>Product Details</span>
+                        <svg class="w-6 h-6 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                </h2>
+                    <div class="accordion-content mt-4 text-gray-600" style="max-height: fit-content;">
+                    <table class="w-full text-left border-collapse">
+                        <tbody>
+                            <tr class="border-b">
+                                <td class="py-3 pr-4 font-medium">Fabric</td>
+                                <td class="py-3">Marine-Grade Acrylic Canvas</td>
+                            </tr>
+                            <tr class="border-b">
+                                <td class="py-3 pr-4 font-medium">Frame</td>
+                                <td class="py-3">Powder-Coated Aluminum</td>
+                            </tr>
+                            <tr class="border-b">
+                                <td class="py-3 pr-4 font-medium">Operation</td>
+                                <td class="py-3">Motorized with Remote Control</td>
+                            </tr>
+                            <tr>
+                                <td class="py-3 pr-4 font-medium">Features</td>
+                                <td class="py-3">UV Resistant, Water Repellent, Mold Resistant</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Dimensions and Installation -->
+                <div class="border-b lg:border-b-0 border-gray-200 py-6">
+                <h2>
+                        <button class="accordion-button active flex justify-between items-center w-full text-lg font-semibold text-left text-gray-800 hover:text-indigo-600">
+                        <span>Dimensions and Installation</span>
+                        <svg class="w-6 h-6 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                </h2>
+                    <div class="accordion-content mt-4 text-gray-600" style="max-height: fit-content;">
+                    <table class="w-full text-left border-collapse">
+                        <tbody>
+                            <tr class="border-b">
+                                <td class="py-3 pr-4 font-medium">Available Widths</td>
+                                <td class="py-3">8 ft, 10 ft, 12 ft, 16 ft</td>
+                            </tr>
+                            <tr class="border-b">
+                                <td class="py-3 pr-4 font-medium">Projection</td>
+                                <td class="py-3">10 ft</td>
+                            </tr>
+                            <tr class="border-b">
+                                <td class="py-3 pr-4 font-medium">Mounting Hardware</td>
+                                <td class="py-3">Included for Wood and Masonry</td>
+                            </tr>
+                            <tr>
+                                <td class="py-3 pr-4 font-medium">Installation Guide</td>
+                                <td class="py-3">
+                                    <a href="#" class="text-indigo-600 hover:underline">Download PDF</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Shipping and Returns -->
+            <div class="border-b border-gray-200 py-6">
+                <h2>
+                    <button class="accordion-button active flex justify-between items-center w-full text-lg font-semibold text-left text-gray-800 hover:text-indigo-600">
+                        <span>Shipping and Returns</span>
+                        <svg class="w-6 h-6 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                </h2>
+                <div class="accordion-content mt-4 text-gray-600" style="max-height: fit-content;">
+                   <p>This item ships via freight due to its size. Please allow 7-10 business days for delivery. We offer a 30-day return policy on all our awnings. If you're not satisfied with your purchase, please contact our customer service to arrange a return. Note that return shipping fees may apply and the product must be in its original condition.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="csc_java.js"></script>
+</body>
+</html>
+

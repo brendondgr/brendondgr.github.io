@@ -253,11 +253,9 @@
 cd Fellowship-Finder</code><button class="copy-btn">Copy</button></pre>
 
                     <h3 class="font-semibold mt-6 mb-2">2. Set Up Credentials</h3>
-                    <p>Create a file named <code>api_key.json</code> in the <code>configs/</code> directory. You can add API keys for Gemini and/or Perplexity. The application defaults to using Perplexity if available.</p>
-                    <pre class="relative bg-slate-100 p-4 rounded-lg text-sm"><code class="language-json">{
-    "gemini_api_key": "YOUR_GEMINI_API_KEY_HERE",
-    "perplexity_api_key": "YOUR_PERPLEXITY_API_KEY_HERE"
-}</code><button class="copy-btn">Copy</button></pre>
+                    <p>Set up your API keys as environment variables. For Gemini, use "GEMINI_API_KEY" or "GOOGLE_API_KEY". For Perplexity, use "PPLX_API_KEY" or "PERPLEXITY_API_KEY". The application defaults to using Perplexity if available.</p>
+                    <pre class="relative bg-slate-100 p-4 rounded-lg text-sm"><code class="language-bash">export GEMINI_API_KEY="YOUR_GEMINI_API_KEY_HERE"
+export PPLX_API_KEY="YOUR_PERPLEXITY_API_KEY_HERE"</code><button class="copy-btn">Copy</button></pre>
                     <p class="mt-4">Also, add your ProFellow.com login details to <code>configs/login.json</code>.</p>
 
 

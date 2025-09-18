@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Tech'd Out - PC Repair & Business IT Services in Allentown, PA</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom Styles -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .hero-bg {
+            background-color: #4b0000; /* Black Bean */
+            background-image: linear-gradient(rgba(75, 0, 0, 0.8), rgba(75, 0, 0, 0.8)), url('images/security.avif');
+            background-size: cover;
+            background-position: center;
+        }
+        .icon-list li {
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%23f55353'%3E%3Cpath fill-rule='evenodd' d='M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z' clip-rule='evenodd' /%3E%3C/svg%3E") no-repeat left center;
+            background-size: 1.25em;
+            padding-left: 2em;
+        }
+    </style>
+</head>
+<body class="bg-[#e9e0e0] text-[#4b0000]">
+
+    <!-- Header & Navigation -->
+    <header class="bg-[#290000] shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-white">
+                <a href="#">All Tech'd Out</a>
+            </h1>
+            <div class="hidden md:flex space-x-6">
+                <a href="#services" class="text-[#e9e0e0] hover:text-[#f55353] transition duration-300">Services</a>
+                <a href="#business" class="text-[#e9e0e0] hover:text-[#f55353] transition duration-300">For Business</a>
+                <a href="#about" class="text-[#e9e0e0] hover:text-[#f55353] transition duration-300">Our Philosophy</a>
+                <a href="#contact" class="text-[#e9e0e0] hover:text-[#f55353] transition duration-300">Contact</a>
+            </div>
+            <a href="#contact" class="hidden md:block bg-[#f55353] text-white font-semibold px-4 py-2 rounded-lg hover:bg-[#e44343] transition duration-300">Get Support</a>
+             <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-[#290000] px-6 pt-2 pb-4">
+            <a href="#services" class="block py-2 text-[#e9e0e0] hover:text-[#f55353]">Services</a>
+            <a href="#business" class="block py-2 text-[#e9e0e0] hover:text-[#f55353]">For Business</a>
+            <a href="#about" class="block py-2 text-[#e9e0e0] hover:text-[#f55353]">Our Philosophy</a>
+            <a href="#contact" class="block py-2 text-[#e9e0e0] hover:text-[#f55353]">Contact</a>
+            <a href="#contact" class="block mt-2 w-full text-center bg-[#f55353] text-white font-semibold px-4 py-2 rounded-lg hover:bg-[#e44343]">Get Support</a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-bg text-white py-20 md:py-32">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-4xl md:text-6xl font-bold leading-tight mb-4">Your Complete Tech Partner in Allentown</h2>
+                <p class="text-lg md:text-xl text-[#e9e0e0] mb-8 max-w-3xl mx-auto">From PC repairs to full-scale business IT infrastructure, we provide reliable and professional technology services for individuals and businesses throughout the Lehigh Valley.</p>
+                <a href="#services" class="bg-[#f55353] text-white font-bold py-3 px-8 rounded-lg text-lg hover:bg-[#e44343] transition duration-300">Explore Our Services</a>
+            </div>
+        </section>
+
+        <!-- Core Services Section -->
+        <section id="services" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h3 class="text-3xl md:text-4xl font-bold text-[#4b0000]">Comprehensive Tech Services</h3>
+                    <p class="text-lg text-[#4b0000] mt-2">Solutions for every technology challenge, big or small.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Card 1: PC Repair -->
+                    <div class="bg-[#F4F0F0] p-8 rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                        <div class="flex items-center justify-center h-16 w-16 bg-white text-[#f55353] rounded-full mb-4"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg></div>
+                        <h4 class="text-xl font-bold mb-2 text-[#4b0000]">Personal PC Repair</h4>
+                        <p class="text-[#4b0000]">Expert diagnosis and repair for all hardware and software issues on desktops and laptops. We also handle system upgrades, virus removal, and data recovery.</p>
+                    </div>
+                    <!-- Card 2: Server & Network -->
+                    <div class="bg-[#F4F0F0] p-8 rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                        <div class="flex items-center justify-center h-16 w-16 bg-white text-[#f55353] rounded-full mb-4"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M12 5l7 7-7 7" /><path d="M2 12h2m16 0h2M12 2v2m0 16v2" /></svg></div>
+                        <h4 class="text-xl font-bold mb-2 text-[#4b0000]">Server & Network Maintenance</h4>
+                        <p class="text-[#4b0000]">We design, implement, and maintain efficient Windows-based server architectures and network infrastructures to keep your business running at its peak.</p>
+                    </div>
+                    <!-- Card 3: Phone Systems -->
+                    <div class="bg-[#F4F0F0] p-8 rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                        <div class="flex items-center justify-center h-16 w-16 bg-white text-[#f55353] rounded-full mb-4"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg></div>
+                        <h4 class="text-xl font-bold mb-2 text-[#4b0000]">Phone PBX Systems</h4>
+                        <p class="text-[#4b0000]">Full installation, sales, and 24/7 emergency service for traditional and VoIP phone systems. We support all major brands like Avaya, Panasonic, Samsung, and more.</p>
+                    </div>
+                    <!-- Card 4: Camera Systems -->
+                    <div class="bg-[#F4F0F0] p-8 rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                        <div class="flex items-center justify-center h-16 w-16 bg-white text-[#f55353] rounded-full mb-4"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" /></svg></div>
+                        <h4 class="text-xl font-bold mb-2 text-[#4b0000]">Surveillance & Camera Systems</h4>
+                        <p class="text-[#4b0000]">Custom-built digital surveillance systems to protect your assets. We offer system design, installation, maintenance, and remote internet viewing capabilities.</p>
+                    </div>
+                    <!-- Card 5: Hosting Services -->
+                    <div class="bg-[#F4F0F0] p-8 rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                        <div class="flex items-center justify-center h-16 w-16 bg-white text-[#f55353] rounded-full mb-4"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" /></svg></div>
+                        <h4 class="text-xl font-bold mb-2 text-[#4b0000]">Remote Access & Hosting</h4>
+                        <p class="text-[#4b0000]">Enable your team to work securely from anywhere with our Terminal Server hosting. Centralize applications, improve productivity, and simplify IT management.</p>
+                    </div>
+                    <!-- Card 6: Business Consulting -->
+                    <div class="bg-[#F4F0F0] p-8 rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                        <div class="flex items-center justify-center h-16 w-16 bg-white text-[#f55353] rounded-full mb-4"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283-.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" /></svg></div>
+                        <h4 class="text-xl font-bold mb-2 text-[#4b0000]">Small & Medium Business Consulting</h4>
+                        <p class="text-[#4b0000]">We offer personalized IT consulting to help you make smart technology decisions, maximize existing resources, and implement preventative maintenance plans.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Business Solutions Section -->
+        <section id="business" class="py-20 bg-[#e9e0e0]">
+            <div class="container mx-auto px-6">
+                 <div class="text-center mb-12">
+                    <h3 class="text-3xl md:text-4xl font-bold text-[#4b0000]">Proactive IT for Your Business</h3>
+                    <p class="text-lg text-[#4b0000] mt-2">Better than rescue—we prevent problems before they happen.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <img src="images/server.avif" alt="Business IT Solutions" class="rounded-lg shadow-xl w-full">
+                    </div>
+                    <div>
+                        <h4 class="text-2xl font-semibold text-[#4b0000] mb-4">Preventative Maintenance & Monitoring</h4>
+                        <p class="text-[#4b0000] mb-6">Our managed services safeguard your office systems to ensure your operations run without interruption. We focus on prevention to save you from costly downtime and data loss.</p>
+                        <ul class="space-y-4 text-[#4b0000] icon-list">
+                            <li><strong>Hardware Health Monitoring:</strong> We ensure your hardware is healthy and hard drives do not run out of space.</li>
+                            <li><strong>Automated Security Patching:</strong> All computers receive the latest security patches from Microsoft automatically.</li>
+                            <li><strong>Daily Virus Scans:</strong> We use tamper-resistant antivirus software, included with our service, to scan daily.</li>
+                            <li><strong>Software Deployment:</strong> We ensure new software is deployed correctly and unauthorized programs are detected.</li>
+                            <li><strong>Fail-Safe Data Backups:</strong> State-of-the-art backup solutions to protect your critical data from any catastrophe.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Philosophy Section -->
+        <section id="about" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="lg:flex lg:items-center lg:gap-16">
+                     <div class="lg:w-1/2">
+                        <h3 class="text-3xl md:text-4xl font-bold text-[#4b0000]">Our Philosophy: People First, Technology Second</h3>
+                        <p class="mt-4 text-lg text-[#4b0000]">We are seasoned, local professionals—not a franchise. Our consultants are focused on customer communication and have a genuine concern for your well-being. We avoid "geek speak" and explain technology in terms you can understand, so you feel comfortable and empowered.</p>
+                        <p class="mt-4 text-lg text-[#4b0000]">Before you make large, expensive changes, call us for a consultation. Many times, we can identify ways to maximize your existing resources rather than simply replacing them. We bridge the gap between the techies and the business people.</p>
+                    </div>
+                    <div class="mt-8 lg:mt-0 lg:w-1/2">
+                        <img src="images/handshake.avif" alt="Consultant explaining tech to a client" class="rounded-lg shadow-2xl w-full h-auto">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 bg-[#4b0000] text-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h3 class="text-3xl md:text-4xl font-bold">Get in Touch</h3>
+                    <p class="text-lg text-[#e9e0e0] mt-2">Have a question or need support? We're here to help.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <!-- Contact Info & Map -->
+                    <div>
+                        <h4 class="text-2xl font-bold mb-4">Contact & Location</h4>
+                        <p class="text-lg text-[#e9e0e0] mb-2">
+                            <span class="font-semibold">Address:</span> 1155 Union Blvd, Allentown, PA 18109
+                        </p>
+                         <p class="text-lg text-[#e9e0e0] mb-2">
+                            <span class="font-semibold">Phone:</span> (555) 123-4567
+                        </p>
+                        <p class="text-lg text-[#e9e0e0] mb-4">
+                            <span class="font-semibold">Email:</span> support@alltechdout.com
+                        </p>
+                        <div class="mt-6 rounded-lg shadow-md overflow-hidden h-80 relative group">
+                           <a href="https://www.google.com/maps/search/?api=1&query=1155+Union+Blvd+Allentown+PA+18109" target="_blank" class="block w-full h-full relative">
+                                <img src="images/googlemaps.png" alt="Map to All Tech'd Out" class="w-full h-full object-cover group-hover:opacity-75 transition-opacity duration-300">
+                                <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white text-xl font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                    Click here to see on Google Maps
+                                </div>
+                           </a>
+                        </div>
+                    </div>
+                    <!-- Contact Form -->
+                    <div>
+                        <h4 class="text-2xl font-bold mb-4">Send Us a Message</h4>
+                        <form action="#" method="POST" class="bg-[#784040] p-8 rounded-lg">
+                            <div class="mb-4">
+                                <label for="name" class="block text-[#e9e0e0] font-medium mb-2">Your Name</label>
+                                <input type="text" id="name" name="name" class="w-full px-4 py-2 text-[#4b0000] bg-[#e9e0e0] border border-[#a58080] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#f55353]" required>
+                            </div>
+                            <div class="mb-4">
+                                <label for="email" class="block text-[#e9e0e0] font-medium mb-2">Your Email</label>
+                                <input type="email" id="email" name="email" class="w-full px-4 py-2 text-[#4b0000] bg-[#e9e0e0] border border-[#a58080] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#f55353]" required>
+                            </div>
+                            <div class="mb-4">
+                                <label for="message" class="block text-[#e9e0e0] font-medium mb-2">Message</label>
+                                <textarea id="message" name="message" rows="5" class="w-full px-4 py-2 text-[#4b0000] bg-[#e9e0e0] border border-[#a58080] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#f55353]" required></textarea>
+                            </div>
+                            <div>
+                                <button type="submit" class="w-full bg-[#f55353] text-white font-bold py-3 px-6 rounded-lg hover:bg-[#e44343] transition duration-300">Submit Request</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#290000] text-white py-8">
+        <div class="container mx-auto px-6 text-center border-t border-[#784040] pt-8">
+            <p>&copy; 2025 All Tech'd Out. All Rights Reserved.</p>
+            <p class="text-[#a58080] mt-1">Serving Allentown & the Lehigh Valley Region.</p>
+        </div>
+    </footer>
+    
+    <script>
+        // Simple script for mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
+
+
+
+
