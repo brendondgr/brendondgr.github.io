@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 colorSelector.innerHTML = '';
                 hiddenColors.innerHTML = '';
 
-                const longNameThreshold = 15;
+                const longNameThreshold = 25;
                 
                 productData.colors.forEach((color, index) => {
                     const button = document.createElement('button');
@@ -141,6 +141,13 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
             }
             
+            function calculateTotalPrice() {
+                const selectedSizeIndex = sizeSelector.value;
+                const selectedSize = productData.sizes[selectedSizeIndex];
+                const quantity = parseInt(quantitySpan.textContent);
+                return (selectedSize.price * quantity).toFixed(2);
+            }
+
             function updateColorPanelLayout() {
                 let visibleCount, targetPlaceholder, gridColsClass;
 
@@ -239,4 +246,81 @@ document.addEventListener('DOMContentLoaded', function () {
                     }
                 });
             });
-        });
+
+    // PayPal Buttons Integration
+    paypal.Buttons({
+        fundingSource: paypal.FUNDING.PAYPAL,
+        style: {
+            layout: 'vertical',
+            color: 'blue',
+            shape: 'rect',
+            label: 'paypal'
+        },
+        createOrder: function(data, actions) {
+            // Replace with your actual backend call to create an order
+            return actions.order.create({
+                purchase_units: [{
+                    amount: {
+                        value: calculateTotalPrice() // Use dynamic price
+                    }
+                }]
+            });
+        },
+        onApprove: function(data, actions) {
+            // Replace with your actual backend call to capture the order
+            return actions.order.capture().then(function(details) {
+                alert('Transaction completed by ' + details.payer.name.given_name + '!');
+            });
+        }
+    }).render('#paypal-button-container');
+
+    paypal.Buttons({
+        fundingSource: paypal.FUNDING.CARD,
+        style: {
+            layout: 'vertical',
+            color: 'silver',
+            shape: 'rect',
+            label: 'credit'
+        },
+        createOrder: function(data, actions) {
+            return actions.order.create({
+                purchase_units: [{
+                    amount: {
+                        value: calculateTotalPrice()
+                    }
+                }]
+            });
+        },
+        onApprove: function(data, actions) {
+            return actions.order.capture().then(function(details) {
+                alert('Transaction completed by ' + details.payer.name.given_name + '!');
+            });
+        }
+    }).render('#paypal-button-container');
+
+    paypal.Buttons({
+        fundingSource: paypal.FUNDING.VENMO,
+        style: {
+            layout: 'vertical',
+            color: 'blue',
+            shape: 'rect',
+            label: 'venmo'
+        },
+        createOrder: function(data, actions) {
+            // Replace with your actual backend call to create an order
+            return actions.order.create({
+                purchase_units: [{
+                    amount: {
+                        value: calculateTotalPrice() // Use dynamic price
+                    }
+                }]
+            });
+        },
+        onApprove: function(data, actions) {
+            // Replace with your actual backend call to capture the order
+            return actions.order.capture().then(function(details) {
+                alert('Transaction completed by ' + details.payer.name.given_name + '!');
+            });
+        }
+    }).render('#paypal-button-container');
+});

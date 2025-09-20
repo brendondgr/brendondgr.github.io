@@ -7,6 +7,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="csc_css.css">
+    <script src="https://www.paypal.com/sdk/js?client-id=sb&components=buttons&buyer-country=US"></script>
 </head>
 <body class="bg-gray-50 text-gray-800">
 
@@ -14,7 +15,7 @@
         <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
             <!-- Image Carousel Column -->
             <div class="w-full space-y-6">
-                 <div id="carousel" class="relative carousel-container bg-gray-200 rounded-lg overflow-hidden shadow-lg">
+                <div id="carousel" class="relative carousel-container bg-gray-200 rounded-lg overflow-hidden shadow-lg">
                     <!-- Images will be dynamically inserted here by JavaScript -->
                     <button id="prevBtn" class="absolute left-4 top-1/2 -translate-y-1/2 bg-white/70 p-2 rounded-full hover:bg-white transition z-10">
                         <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
@@ -32,8 +33,8 @@
                 <h1 class="text-4xl font-bold tracking-tight text-gray-900">Prestige Retractable Awning</h1>
 
                 <div class="flex justify-between items-center">
-                     <p id="productPrice" class="text-3xl text-indigo-600 font-semibold"></p>
-                     <span id="productSku" class="text-sm text-gray-500 font-mono"></span>
+                    <p id="productPrice" class="text-3xl text-indigo-600 font-semibold"></p>
+                    <span id="productSku" class="text-sm text-gray-500 font-mono"></span>
                 </div>
 
                 <p class="text-lg text-gray-600 leading-relaxed">
@@ -60,9 +61,7 @@
                 </div>
 
                 <!-- Add to Cart -->
-                <button class="w-full bg-indigo-600 text-white font-semibold py-3 px-8 rounded-lg shadow-md hover:bg-indigo-700 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                    Add to Cart
-                </button>
+                <div id="paypal-button-container"></div>
             </div>
         </div>
         
