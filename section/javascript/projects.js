@@ -74,14 +74,14 @@ async function loadProjects() {
             if (!project.title) return; // Skip empty rows
 
             const projectCard = document.createElement('article');
-            projectCard.className = 'bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 group';
+            projectCard.className = 'panel flex flex-col overflow-hidden transition-transform duration-300 transform hover:-translate-y-2';
 
             const tagsHTML = project.tags.split(',')
                 .map(tag => tag.trim())
                 .filter(tag => tag)
                 .map(tag => {
                     const tagLower = tag.toLowerCase();
-                    const colorClass = tagColorClasses[tagLower] || 'bg-slate-100 text-slate-800';
+                    const colorClass = tagColorClasses[tagLower] || 'bg-gray-700 text-gray-200';
                     return `<span class="inline-block px-2 py-1 text-xs font-semibold ${colorClass} rounded-full">${tag}</span>`;
                 })
                 .join(' ');
@@ -90,23 +90,23 @@ async function loadProjects() {
 
             projectCard.innerHTML = `
                 <img class="w-full h-48 object-cover" src="${imageUrl}" alt="${project.title} project image" onerror="this.onerror=null;this.src='https://placehold.co/600x400/e2e8f0/475569?text=Image+Not+Found';">
-                <div class="h-[300px] flex flex-col">
-                    <div class="p-6 flex-grow overflow-hidden">
+                <div class="flex flex-col flex-grow">
+                    <div class="p-6 flex-grow">
                         <div class="flex items-center justify-between">
-                            <h3 class="text-xl font-semibold text-slate-900">${project.title}</h3>
+                            <h3 class="text-xl font-semibold text-white">${project.title}</h3>
                             <div class="flex flex-wrap gap-2 justify-end flex-shrink-0 ml-4">
                                 ${tagsHTML}
                             </div>
                         </div>
-                        <p class="mt-3 text-slate-600 text-sm leading-relaxed">
+                        <p class="mt-3 text-slate-400 text-sm leading-relaxed">
                             ${project.description}
                         </p>
                     </div>
-                    <footer class="bg-slate-50 px-6 py-4 flex items-center justify-end space-x-4">
-                        <a href="${project.github}" target="_blank" rel="noopener noreferrer" class="text-sm font-medium text-slate-600 hover:text-indigo-600 transition-colors duration-200" title="View Source Code">
+                    <footer class="px-6 py-4 flex items-center justify-end space-x-4 border-t border-slate-700">
+                        <a href="${project.github}" target="_blank" rel="noopener noreferrer" class="text-sm font-medium text-slate-300 hover:text-sky-400 transition-colors duration-200" title="View Source Code">
                             <i class="bi bi-github"></i> Source Code
                         </a>
-                        <a href="../projects/${project.html}" class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" title="View Project">
+                        <a href="../projects/${project.html}" class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-sky-600 hover:bg-sky-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-sky-500" title="View Project">
                             View Project <i class="bi bi-box-arrow-up-right ml-2"></i>
                         </a>
                     </footer>
@@ -120,43 +120,15 @@ async function loadProjects() {
 }
 
 const tagColorClasses = {
-    'python': 'bg-purple-100 text-purple-800',
-    'scraping': 'bg-gray-100 text-gray-800',
-    'js': 'bg-green-100 text-green-800',
-    'tailwind': 'bg-sky-100 text-sky-800',
-    'flask': 'bg-yellow-100 text-yellow-800',
+    'python': 'bg-purple-900 text-purple-200',
+    'scraping': 'bg-gray-700 text-gray-200',
+    'js': 'bg-green-900 text-green-200',
+    'tailwind': 'bg-sky-900 text-sky-200',
+    'flask': 'bg-yellow-900 text-yellow-200',
 };
 
 document.addEventListener('DOMContentLoaded', function() {
-    loadHTML('navbar-container', 'navbar.html', () => {
-        // Mobile menu toggler
-        const navbarToggler = document.getElementById('navbar-toggler');
-        const navbarCollapse = document.getElementById('navbarCollapse');
-
-        if (navbarToggler && navbarCollapse) {
-            navbarToggler.addEventListener('click', function() {
-                navbarCollapse.classList.toggle('hidden');
-            });
-        }
-
-        // Set active nav link
-        const currentPath = window.location.pathname;
-        const navLinks = document.querySelectorAll('.nav-item, .mobile-nav-item');
-
-        navLinks.forEach(link => {
-            const linkPath = link.getAttribute('href');
-            // Normalize paths to remove trailing slashes for comparison
-            const normalizedCurrentPath = currentPath.endsWith('/') ? currentPath.slice(0, -1) : currentPath;
-            const normalizedLinkPath = linkPath.endsWith('/') ? linkPath.slice(0, -1) : linkPath;
-
-            // Handle root path case (e.g., / or /index.html)
-            if ((normalizedCurrentPath === '' || normalizedCurrentPath === '/index.html') && (normalizedLinkPath === '/index.html' || normalizedLinkPath === '')) {
-                link.classList.add('active');
-            } else if (normalizedLinkPath !== '' && normalizedCurrentPath.endsWith(normalizedLinkPath)) {
-                link.classList.add('active');
-            }
-        });
-    });
-
+    // The existing navbar loader (`navbar-loader.js`) handles this now.
+    // This function can be simplified to just load projects.
     loadProjects();
 }); 

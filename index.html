@@ -3,131 +3,232 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Brendondgr's Website</title>
+    <title>Brendon DGR's Website</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="index/index.css">
-</head>
-<body class="antialiased bg-white">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/section/css/main.css">
+    <style>
+        /* Scroll reveal animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Custom scrollbar for project section */
+        .horizontal-scroll::-webkit-scrollbar {
+            height: 8px;
+        }
+        .horizontal-scroll::-webkit-scrollbar-track {
+            background: #161b22;
+            border-radius: 10px;
+        }
+        .horizontal-scroll::-webkit-scrollbar-thumb {
+            background-color: #238636;
+            border-radius: 10px;
+        }
+        .horizontal-scroll::-webkit-scrollbar-thumb:hover {
+            background-color: #2ea043;
+        }
 
+        /* Particles.js background container styling */
+        #particles-js-container {
+            position: relative;
+            z-index: 1;
+        }
+        #particles-js {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Placeholder for Navbar -->
     <div id="navbar-container"></div>
 
-    <!-- Hero Section -->
-    <section id="home" class="relative min-h-screen flex items-center justify-center text-center overflow-hidden pt-16">
-        <!-- Background Image and Overlay -->
-        <div class="absolute inset-0 z-0">
-            <img src="images/hero_backdrop.avif" 
-                alt="Abstract technology background" 
-                class="w-full h-full object-cover"
-                onerror="this.onerror=null;this.src='https://placehold.co/1920x1080/000000/ffffff?text=Image+Not+Found';">
-            <div class="absolute inset-0 bg-black opacity-75"></div>
-        </div>
-
-        <!-- Hero Content -->
-        <div class="relative z-10 max-w-screen-xl mx-auto px-4 text-center py-24 lg:py-32">
-
-            <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight text-white mb-6">
-                Hi, I'm Brendon 👋
-            </h1>
-            <p class="text-lg md:text-xl text-slate-200 max-w-3xl mx-auto mb-8">
-                A Graduate Student and Researcher at the Intersection of Artificial Intelligence and Medicine, looking to create efficient, interactive systems.
-            </p>
-            <a href="#about" class="inline-block bg-blue-600 text-white font-medium text-lg px-8 py-4 rounded-lg hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-1">
-                Learn More About Me
-            </a>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="py-10 lg:py-16 fade-in">
-        <div class="max-w-screen-xl mx-auto px-4">
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div class="order-2 md:order-1">
-                    <h2 class="text-3xl md:text-4xl font-bold text-slate-800 mb-4">About Me</h2>
-                    <p class="text-slate-600 mb-4 text-lg">
-                        My focus is to create efficient systems involving the use of Artificial Intelligence in Healthcare. My goal is to ensure Medical Professionals have the tools available to assist them in their daily work so they can focus on their patients.
-                    </p>
-                    <p class="text-slate-600 mb-6 text-lg">
-                        Outside of my research, I enjoy partaking in creative projects, which include 3D Modeling and Game Development. This is done through the use of Blender, Unity, and Adobe products. I'm also an avid athelete.
-                    </p>
-                </div>
-                <div class="order-1 md:order-2 flex justify-center">
-                    <img src="images/logo.png" alt="Brendon Portrait" class="rounded-full shadow-2xl w-64 h-64 md:w-80 md:h-80 object-cover">
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="relative min-h-screen flex items-center justify-center text-center overflow-hidden pt-16">
+             <!-- Background Image and Overlay -->
+            <div class="absolute inset-0 z-0">
+                <img src="images/hero_backdrop.avif" 
+                    alt="Abstract technology background" 
+                    class="w-full h-full object-cover"
+                    onerror="this.onerror=null;this.src='https://placehold.co/1920x1080/0d1117/c9d1d9?text=Image+Not+Found';">
+                <div class="absolute inset-0 bg-gradient-to-b from-black/75 via-black/80 to-[#0d1117]"></div>
+            </div>
+            
+            <!-- Hero Content -->
+            <div class="relative z-10 max-w-screen-xl mx-auto px-4 py-24 lg:py-32">
+                <h1 class="text-4xl md:text-6xl font-bold tracking-tight text-white mb-4">
+                    Hi, I'm Brendon <span class="inline-block animate-wave">👋</span>
+                </h1>
+                <p class="text-lg md:text-xl text-slate-200 max-w-3xl mx-auto">
+                    A Graduate Student and Researcher at the Intersection of Artificial Intelligence and Medicine, looking to create efficient, interactive systems.
+                </p>
+                <div class="mt-10">
+                    <a href="/section/projects.html" class="inline-block btn-primary font-medium text-lg px-8 py-4 rounded-lg">
+                        Explore My Work
+                    </a>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="py-10 lg:py-16 bg-white">
-        <div class="max-w-screen-xl mx-auto px-4">
-            <div class="text-center mb-12 fade-in">
-                <h2 class="text-3xl md:text-4xl font-bold text-slate-800 mb-4">My Projects</h2>
-                <p class="text-slate-600 text-lg max-w-2xl mx-auto">Here are a few highlighted projects I've worked on. For all projects, click the "All Projects" button below.</p>
-            </div>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Project Card 1 -->
-                <div class="bg-slate-50 rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 fade-in">
-                    <img src="images/surgical_ai.jpg" alt="Project 1" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-slate-800 mb-2">Medical AI</h3>
-                        <p class="text-slate-600 mb-4">Currently doing research in Medical AI, updates on this project are coming soon.</p>
-                        <span class="font-medium text-slate-400">Coming Soon</span>
+        <!-- Container for sections with particle background -->
+        <div id="particles-js-container">
+            <div id="particles-js"></div>
+
+            <!-- About Section -->
+            <section id="about" class="py-20 lg:py-32 reveal">
+                <div class="max-w-screen-xl mx-auto px-4">
+                    <div class="panel p-8 md:p-12">
+                        <div class="grid md:grid-cols-3 gap-12 items-center">
+                            <div class="md:col-span-2">
+                                <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
+                                    <span class="accent-glow">//</span> About Me
+                                </h2>
+                                <div class="space-y-4 text-slate-300 text-lg">
+                                    <p>
+                                        My focus is to create efficient systems involving the use of Artificial Intelligence in Healthcare. My goal is to ensure Medical Professionals have the tools available to assist them in their daily work so they can focus on their patients.
+                                    </p>
+                                    <p>
+                                        Outside of my research, I enjoy partaking in creative projects, which include 3D Modeling and Game Development. This is done through the use of Blender, Unity, and Adobe products. I'm also an avid athlete.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="flex justify-center items-center">
+                                <div class="relative w-48 h-48 md:w-64 md:h-64">
+                                     <div class="absolute inset-0 border-2 rounded-full accent-border animate-pulse"></div>
+                                    <img src="https://placehold.co/256x256/161b22/c9d1d9?text=BD" alt="Brendon Portrait" class="rounded-full w-full h-full object-cover p-2">
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <!-- Project Card 2 -->
-                <div class="bg-slate-50 rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 fade-in">
-                    <img src="images/computer_vision.avif" alt="Project 2" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-slate-800 mb-2">Computer Vision</h3>
-                        <p class="text-slate-600 mb-4">Computer Vision projects will be updated on the website soon.</p>
-                        <span class="font-medium text-slate-400">Coming Soon</span>
+            </section>
+
+            <!-- Projects Section -->
+            <section id="projects" class="py-20 lg:py-32 reveal">
+                <div class="max-w-screen-xl mx-auto px-4">
+                    <div class="text-center mb-12">
+                        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4"><span class="accent-glow">//</span> My Projects</h2>
+                        <p class="text-slate-400 text-lg max-w-2xl mx-auto">A selection of my work. Scroll horizontally to see more.</p>
+                    </div>
+                    
+                    <div class="flex overflow-x-auto space-x-8 pb-8 horizontal-scroll">
+                        <!-- Project Card 1 -->
+                        <div class="flex-shrink-0 w-80 md:w-96 panel p-6 transform hover:-translate-y-2 transition-transform duration-300">
+                            <img src="https://placehold.co/400x225/1c6b33/ffffff?text=Medical+AI" alt="Medical AI" class="w-full h-48 object-cover rounded-md mb-4">
+                            <h3 class="text-xl font-bold text-white mb-2">Medical AI</h3>
+                            <p class="text-slate-400 mb-4">Currently doing research in Medical AI, updates on this project are coming soon.</p>
+                            <span class="font-medium text-gray-500">Coming Soon</span>
+                        </div>
+                        <!-- Project Card 2 -->
+                        <div class="flex-shrink-0 w-80 md:w-96 panel p-6 transform hover:-translate-y-2 transition-transform duration-300">
+                            <img src="https://placehold.co/400x225/00529b/ffffff?text=Computer+Vision" alt="Computer Vision" class="w-full h-48 object-cover rounded-md mb-4">
+                            <h3 class="text-xl font-bold text-white mb-2">Computer Vision</h3>
+                            <p class="text-slate-400 mb-4">Computer Vision projects will be updated on the website soon.</p>
+                            <span class="font-medium text-gray-500">Coming Soon</span>
+                        </div>
+                        <!-- Project Card 3 -->
+                        <div class="flex-shrink-0 w-80 md:w-96 panel p-6 transform hover:-translate-y-2 transition-transform duration-300">
+                            <img src="https://placehold.co/400x225/9b59b6/ffffff?text=Creative" alt="Creative Endeavours" class="w-full h-48 object-cover rounded-md mb-4">
+                            <h3 class="text-xl font-bold text-white mb-2">Creative Endeavours</h3>
+                            <p class="text-slate-400 mb-4">Using Blender, Adobe and Unity, I have been working on a few interactive projects. Coming soon.</p>
+                            <span class="font-medium text-gray-500">Coming Soon</span>
+                        </div>
+                         <!-- "All Projects" Card -->
+                        <div class="flex-shrink-0 w-80 md:w-96 panel flex flex-col items-center justify-center text-center p-6">
+                             <div class="w-24 h-24 rounded-full bg-gray-800 flex items-center justify-center mb-4">
+                                <i class="fas fa-arrow-right text-4xl text-white"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-white mb-2">View All Projects</h3>
+                            <p class="text-slate-400 mb-4">Explore my complete portfolio of work and experiments.</p>
+                            <a href="/section/projects.html" class="btn-primary font-medium px-6 py-3 rounded-lg">
+                                See More
+                            </a>
+                        </div>
                     </div>
                 </div>
-                <!-- Project Card 3 -->
-                <div class="bg-slate-50 rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 fade-in">
-                    <img src="images/game_development.avif" alt="Project 3" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-slate-800 mb-2">Creative Endeavours </h3>
-                        <p class="text-slate-600 mb-4">Using Blender, Adobe and Unity, I have been working on a few interactive projects. Coming soon.</p>
-                        <span class="font-medium text-slate-400">Coming Soon</span>
-                    </div>
-                </div>
-            </div>
-            <div class="flex justify-center mt-12">
-                <a href="section/projects.html" class="bg-blue-600 text-white font-medium text-lg px-8 py-4 rounded-lg hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-1 max-w-[250px] inline-block">
-                    All Projects
+            </section>
+        </div>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 lg:py-32 reveal">
+            <div class="max-w-screen-md mx-auto px-4 text-center">
+                 <h2 class="text-3xl md:text-4xl font-bold text-white mb-4"><span class="accent-glow">//</span> Get In Touch</h2>
+                <p class="text-slate-400 text-lg mb-8">
+                    I'm always open to discussing new research, projects, or collaboration opportunities. Feel free to reach out.
+                </p>
+                <a href="mailto:brendondgr@gmail.com" class="inline-block btn-primary font-medium text-lg px-8 py-4 rounded-lg">
+                    Email Me
                 </a>
             </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="py-10 lg:py-16">
-        <div class="max-w-screen-md mx-auto px-4 text-center fade-in">
-            <h2 class="text-3xl md:text-4xl font-bold text-slate-800 mb-4">Get In Touch</h2>
-            <p class="text-slate-600 text-lg mb-8">
-                I'm always open to discussing new research, projects, or collaboration opportunities.
-            </p>
-            <a href="mailto:brendondgr@gmail.com" class="inline-block bg-blue-600 text-white font-medium text-lg px-8 py-4 rounded-lg hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-1">
-                Email Here
-            </a>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <!-- Footer -->
-    <footer class="bg-white border-t border-gray-200">
+    <footer class="bg-transparent mt-16">
         <div class="max-w-screen-xl mx-auto py-6 px-4 text-center text-slate-500">
-            <p>&copy; 2025 brendondgr. All Rights Reserved.</p>
+            <p>&copy; 2025 Brendon D. All Rights Reserved.</p>
         </div>
     </footer>
 
-    <script src="index/index.js"></script>
-    <script src="index/navbar.js"></script>
+    <!-- JS Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    
+    <!-- Main Application Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // --- Particles.js Initialization ---
+            particlesJS('particles-js', {
+                "particles": {
+                    "number": { "value": 60, "density": { "enable": true, "value_area": 800 } },
+                    "color": { "value": "#ffffff" },
+                    "shape": { "type": "circle", "stroke": { "width": 0, "color": "#000000" } },
+                    "opacity": { "value": 0.3, "random": true, "anim": { "enable": true, "speed": 1, "opacity_min": 0, "sync": false } },
+                    "size": { "value": 3, "random": true, "anim": { "enable": false } },
+                    "line_linked": { "enable": true, "distance": 150, "color": "#ffffff", "opacity": 0.2, "width": 1 },
+                    "move": { "enable": true, "speed": 1, "direction": "none", "random": true, "straight": false, "out_mode": "out", "bounce": false }
+                },
+                "interactivity": {
+                    "detect_on": "canvas",
+                    "events": { "onhover": { "enable": true, "mode": "grab" }, "onclick": { "enable": false }, "resize": true },
+                    "modes": {
+                        "grab": { "distance": 140, "line_linked": { "opacity": 0.5 } }
+                    }
+                },
+                "retina_detect": true
+            });
 
+            // --- Scroll Reveal Animation ---
+            const revealElements = document.querySelectorAll('.reveal');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            revealElements.forEach(el => {
+                observer.observe(el);
+            });
+        });
+    </script>
+    <script src="/section/javascript/navbar-loader.js"></script>
 </body>
 </html>
+

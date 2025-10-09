@@ -9,22 +9,23 @@
     <!-- Google Fonts: Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
     <!-- Chart.js for graphs -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="/section/css/main.css">
     <link rel="stylesheet" href="css/mortgage.css">
 
 </head>
-<body class="bg-gray-100 min-h-screen p-4">
+<body class="antialiased min-h-screen p-4">
 
     <div id="navbar-container"></div>
 
     <div id="content-container" class="w-[95%] md:w-[60%] mx-auto mt-20"></div>
 
-    <script src="javascript/navbar.js"></script>
+    <script src="/section/javascript/navbar-loader.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             fetch('html/mortgage_content.html')

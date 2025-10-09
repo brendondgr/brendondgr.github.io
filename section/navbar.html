@@ -1,42 +1,109 @@
-<nav class="bg-gray-900 text-white fixed top-0 left-0 w-full z-50 shadow-md">
-    <div class="max-w-screen-xl mx-auto px-4">
-        <div class="flex justify-between items-center py-4">
-            <!-- Brand -->
-            <a href="../index.html" class="text-2xl font-bold">brendondgr</a>
-
-            <!-- Desktop Nav -->
-            <div class="hidden md:flex items-center space-x-8">
-                <a href="../index.html" class="hover:text-blue-400 transition-colors">Home</a>
-                <a href="../section/projects.html" class="hover:text-blue-400 transition-colors">Projects</a>
-            </div>
-
-            <!-- Social Links -->
-            <div class="hidden md:flex items-center space-x-4">
-                <a class="hover:text-blue-400 transition-colors" href="https://github.com/brendondgr" aria-label="GitHub" target="_blank"><i class="bi bi-github text-xl"></i></a>
-                <a class="hover:text-blue-400 transition-colors" href="https://www.linkedin.com/in/brendon-gutierrez-670854285/" aria-label="LinkedIn" target="_blank"><i class="bi bi-linkedin text-xl"></i></a>
-                <a class="hover:text-blue-400 transition-colors" href="https://www.youtube.com/@Brendeetoh" aria-label="YouTube" target="_blank"><i class="bi bi-youtube text-xl"></i></a>
-                <a class="hover:text-blue-400 transition-colors" href="mailto:brendondgr@gmail.com" aria-label="Email"><i class="bi bi-envelope-fill text-xl"></i></a>
-            </div>
-
-            <!-- Mobile Menu Button -->
-            <div class="md:hidden">
-                <button id="mobile-menu-button" class="text-white focus:outline-none">
-                    <i class="fas fa-bars text-2xl"></i>
-                </button>
-            </div>
+<header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+        <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+            <nav class="flex items-center justify-between h-16 md:h-20">
+                <div class="flex-shrink-0">
+                    <a href="/index.html" class="text-xl font-bold font-mono tracking-wider text-white">B/DGR</a>
+                </div>
+                <div class="hidden md:flex md:items-center md:space-x-2">
+                    <a href="/wip.html" class="nav-link text-gray-300 hover:text-white">About</a>
+                    <a href="/section/projects.html" class="nav-link text-gray-300 hover:text-white">Projects</a>
+                    <a href="/wip.html" class="nav-link text-gray-300 hover:text-white">Contact</a>
+                </div>
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-white focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </nav>
         </div>
-    </div>
-
-    <!-- Mobile Menu -->
-    <div id="mobile-menu" class="hidden md:hidden px-4 pt-2 pb-4 space-y-2">
-        <a href="/index.html" class="block hover:text-blue-400 transition-colors">Home</a>
-        <a href="/section/projects.html" class="block hover:text-blue-400 transition-colors">Projects</a>
-        <div class="border-t border-gray-700 my-2"></div>
-        <div class="flex items-center space-x-4">
-             <a class="hover:text-blue-400 transition-colors" href="https://github.com/brendondgr" aria-label="GitHub" target="_blank"><i class="bi bi-github text-xl"></i></a>
-             <a class="hover:text-blue-400 transition-colors" href="https://www.linkedin.com/in/brendon-gutierrez-670854285/" aria-label="LinkedIn" target="_blank"><i class="bi bi-linkedin text-xl"></i></a>
-             <a class="hover:text-blue-400 transition-colors" href="https://www.youtube.com/@Brendeetoh" aria-label="YouTube" target="_blank"><i class="bi bi-youtube text-xl"></i></a>
-             <a class="hover:text-blue-400 transition-colors" href="mailto:brendondgr@gmail.com" aria-label="Email"><i class="bi bi-envelope-fill text-xl"></i></a>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden panel px-4 pt-2 pb-4 space-y-2">
+            <a href="/wip.html" class="block nav-link text-gray-300 hover:text-white">About</a>
+            <a href="/section/projects.html" class="block nav-link text-gray-300 hover:text-white">Projects</a>
+            <a href="/wip.html" class="block nav-link text-gray-300 hover:text-white">Contact</a>
         </div>
-    </div>
-</nav> 
+    </header>
+
+    <style>
+        /* Styling for navigation links */
+        .nav-link {
+            transition: all 0.3s ease;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            border: 1px solid transparent;
+        }
+
+        .nav-link:hover,
+        .active-nav-link {
+            background: rgba(33, 38, 45, 0.8);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            border: 1px solid rgba(48, 54, 61, 0.7);
+            color: #58a6ff !important;
+            box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.2);
+        }
+    </style>
+
+    <script>
+        // --- Sticky Navbar Background on Scroll ---
+        const navbar = document.getElementById('navbar');
+        const heroSection = document.getElementById('home'); // Assuming 'home' section is present in the page where navbar is included
+        
+        window.addEventListener('scroll', () => {
+            if (heroSection) {
+                if (window.scrollY > 50) {
+                    if (window.scrollY > heroSection.offsetHeight - 100) {
+                        navbar.classList.add('panel');
+                    } else {
+                        navbar.classList.remove('panel');
+                    }
+                } else {
+                    navbar.classList.remove('panel');
+                }
+            } else {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('panel');
+                } else {
+                    navbar.classList.remove('panel');
+                }
+            }
+        });
+
+        // --- Active Nav Link based on URL ---
+        document.addEventListener('DOMContentLoaded', () => {
+            const navLinks = document.querySelectorAll('header nav a.nav-link');
+            const mobileNavLinks = document.querySelectorAll('#mobile-menu a.nav-link');
+            const currentPath = window.location.pathname;
+
+            function setActiveLink(links) {
+                links.forEach(link => {
+                    const linkPath = new URL(link.href).pathname;
+                    if (linkPath === currentPath) {
+                        link.classList.add('active-nav-link');
+                    } else {
+                        link.classList.remove('active-nav-link');
+                    }
+                });
+            }
+
+            setActiveLink(navLinks);
+            setActiveLink(mobileNavLinks);
+        });
+
+        // --- Mobile Menu Toggle ---
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileNavLinks = mobileMenu.querySelectorAll('a');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // --- Close mobile menu on link click ---
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script> 

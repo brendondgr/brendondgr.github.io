@@ -35,9 +35,9 @@ function parseCSV(csv) {
 // --- Color generation for tags ---
 const tagColors = {};
 const colorPalette = [
-    'bg-blue-100 text-blue-800', 'bg-green-100 text-green-800', 'bg-yellow-100 text-yellow-800',
-    'bg-purple-100 text-purple-800', 'bg-pink-100 text-pink-800', 'bg-teal-100 text-teal-800',
-    'bg-red-100 text-red-800', 'bg-indigo-100 text-indigo-800', 'bg-gray-200 text-gray-800'
+    'bg-sky-900 text-sky-200', 'bg-green-900 text-green-200', 'bg-yellow-900 text-yellow-200',
+    'bg-purple-900 text-purple-200', 'bg-pink-900 text-pink-200', 'bg-teal-900 text-teal-200',
+    'bg-red-900 text-red-200', 'bg-indigo-900 text-indigo-200', 'bg-slate-700 text-slate-200'
 ];
 let colorIndex = 0;
 
@@ -92,16 +92,16 @@ document.addEventListener('DOMContentLoaded', () => {
             let modalityIcon;
             const modality = course.modality.toLowerCase();
             if (modality === 'in-progress') {
-                modalityIcon = `<svg class="w-4 h-4 mr-1.5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>`;
+                modalityIcon = `<svg class="w-4 h-4 mr-1.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>`;
             } else if (modality === 'online') {
-                modalityIcon = `<svg class="w-4 h-4 mr-1.5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9V3m0 18a9 9 0 009-9m-9 9a9 9 0 00-9-9"></path></svg>`;
+                modalityIcon = `<svg class="w-4 h-4 mr-1.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9V3m0 18a9 9 0 009-9m-9 9a9 9 0 00-9-9"></path></svg>`;
             }
             else {
-                modalityIcon = `<svg class="w-4 h-4 mr-1.5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>`;
+                modalityIcon = `<svg class="w-4 h-4 mr-1.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>`;
             }
             
             const modalityFlag = `
-                <div class="flex items-center text-sm text-gray-600">
+                <div class="flex items-center text-sm text-slate-400">
                     ${modalityIcon}
                     ${course.modality}
                 </div>`;
@@ -110,55 +110,55 @@ document.addEventListener('DOMContentLoaded', () => {
             const forCreditStatus = course.forcredit.toLowerCase();
             if (forCreditStatus === 'yes') {
                 creditHtml = `
-                <div class="flex items-center text-sm text-green-600">
+                <div class="flex items-center text-sm text-green-400">
                      <svg class="w-4 h-4 mr-1.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
                     For Credit
                 </div>`;
             } else if (forCreditStatus === 'no') {
                 creditHtml = `
-                <div class="flex items-center text-sm text-red-600">
+                <div class="flex items-center text-sm text-red-400">
                      <svg class="w-4 h-4 mr-1.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"></path></svg>
                     No Credit
                 </div>`;
             } else if (forCreditStatus === 'audit') {
                 creditHtml = `
-                <div class="flex items-center text-sm text-yellow-600">
+                <div class="flex items-center text-sm text-yellow-400">
                      <svg class="w-4 h-4 mr-1.5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM7 9a1 1 0 000 2h6a1 1 0 100-2H7z" clip-rule="evenodd"></path></svg>
                     Audited
                 </div>`;
             }
             
             const linkButton = `
-                <a href="${course.info}" target="_blank" rel="noopener noreferrer" class="p-2 rounded-full text-gray-500 hover:bg-gray-200 hover:text-gray-800 transition-colors" title="More Info">
+                <a href="${course.info}" target="_blank" rel="noopener noreferrer" class="p-2 rounded-full text-slate-400 hover:bg-slate-700 hover:text-white transition-colors" title="More Info">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
                 </a>`;
 
             if (currentView === 'grid') {
-                card.className = `bg-white rounded-lg shadow-lg overflow-hidden flex flex-col transition-transform transform hover:-translate-y-1 ${schoolClass}`;
+                card.className = `panel overflow-hidden flex flex-col transition-transform transform hover:-translate-y-1 ${schoolClass}`;
                 card.style.borderTop = `5px solid var(--school-primary)`;
                 card.innerHTML = `
                     <div class="p-6 flex-grow">
-                        <h2 class="text-xl font-bold text-gray-900 mb-2">${course.course}</h2>
+                        <h2 class="text-xl font-bold text-white mb-2">${course.course}</h2>
                         <p class="text-md font-semibold mb-4" style="color: var(--school-primary);">${course.school}</p>
                         <div class="flex flex-wrap mb-4">${subjectHtml}</div>
-                        ${course.description ? `<p class="text-sm text-gray-600">${course.description}</p>` : ''}
+                        ${course.description ? `<p class="text-sm text-slate-400">${course.description}</p>` : ''}
                     </div>
-                    <div class="px-6 py-4 bg-gray-50 border-t border-gray-200">
+                    <div class="px-6 py-4 bg-slate-800/50 border-t border-slate-700">
                         <div class="flex justify-between items-center">
                             <div class="flex items-center space-x-4">${modalityFlag}${creditHtml}</div>
                             ${linkButton}
                         </div>
                     </div>`;
             } else { // List View (Reformatted)
-                card.className = `bg-white rounded-lg shadow-lg overflow-hidden flex flex-col sm:flex-row sm:items-center transition-shadow hover:shadow-xl ${schoolClass}`;
+                card.className = `panel overflow-hidden flex flex-col sm:flex-row sm:items-center transition-shadow hover:shadow-xl ${schoolClass}`;
                 card.style.borderLeft = `5px solid var(--school-primary)`;
                 
-                const descriptionHtml = course.description ? `<p class="text-sm text-gray-600 my-2">${course.description}</p>` : '';
+                const descriptionHtml = course.description ? `<p class="text-sm text-slate-400 my-2">${course.description}</p>` : '';
 
                 card.innerHTML = `
                     <div class="flex-grow p-5">
                         <div>
-                            <h2 class="text-lg font-bold text-gray-900">${course.course}</h2>
+                            <h2 class="text-lg font-bold text-white">${course.course}</h2>
                             <p class="text-sm font-semibold" style="color: var(--school-primary);">${course.school}</p>
                         </div>
                         ${descriptionHtml}
@@ -166,7 +166,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             ${subjectHtml}
                         </div>
                     </div>
-                    <div class="flex-shrink-0 p-5 sm:border-l border-t sm:border-t-0 border-gray-200">
+                    <div class="flex-shrink-0 p-5 sm:border-l border-t sm:border-t-0 border-slate-700">
                         <div class="flex items-center justify-start sm:justify-center space-x-4">
                             ${modalityFlag}
                             ${creditHtml}
@@ -186,15 +186,17 @@ document.addEventListener('DOMContentLoaded', () => {
         currentView = view;
         const isGrid = view === 'grid';
         
-        gridViewBtn.classList.toggle('bg-indigo-600', isGrid);
+        // Grid button
+        gridViewBtn.classList.toggle('bg-sky-600', isGrid);
         gridViewBtn.classList.toggle('text-white', isGrid);
-        gridViewBtn.classList.toggle('bg-white', !isGrid);
-        gridViewBtn.classList.toggle('text-gray-900', !isGrid);
+        gridViewBtn.classList.toggle('bg-slate-700', !isGrid);
+        gridViewBtn.classList.toggle('text-slate-200', !isGrid);
         
-        listViewBtn.classList.toggle('bg-indigo-600', !isGrid);
+        // List button
+        listViewBtn.classList.toggle('bg-sky-600', !isGrid);
         listViewBtn.classList.toggle('text-white', !isGrid);
-        listViewBtn.classList.toggle('bg-white', isGrid);
-        listViewBtn.classList.toggle('text-gray-900', isGrid);
+        listViewBtn.classList.toggle('bg-slate-700', isGrid);
+        listViewBtn.classList.toggle('text-slate-200', isGrid);
         
         handleSearch(); // Re-render with the new view
     }

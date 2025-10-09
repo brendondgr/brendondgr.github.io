@@ -1,0 +1,75 @@
+/media/bdgr/Samsung/Projects/brendondgr.github.io/
+  - about-me/
+    - courses.html        // Page displaying courses
+    - css/
+      - courses.css       // Styles for courses.html
+    - javascript/
+      - courses.js        // Javascript for courses.html
+      - navbar.js         // Navigation bar functionality
+  - data/                   // Contains data files
+    - Courses.csv         // Course data
+    - Fellowship.csv      // Fellowship data
+    - Projects.csv        // Project data
+  - images/                 // Contains image assets
+    - computer_vision.avif
+    - fellowship/           // Fellowship specific images
+      - image1.png
+      - image2.png
+      - image3.png
+      - image4.png
+      - image5.png
+    - Fellowship_small.png
+    - fellowship.png
+    - fellowshipfinder.png
+    - game_development.avif
+    - hero_backdrop.avif
+    - hero.png
+    - logo.png
+    - mortgage.jpg
+    - surgical_ai.jpg
+  - index/                  // Main index page assets
+    - index.css           // Styles for index.html
+    - index.js            // Javascript for index.html
+  - index.html            // Main landing page
+  - mini-projects/          // Contains small, independent projects
+    - alltechdout/          // "All Tech'd Out" project
+      - ato.html            // HTML for All Tech'd Out
+      - images/             // Images for All Tech'd Out
+        - camera.avif
+        - computer.avif
+        - googlemaps.png
+        - handshake.avif
+        - security.avif
+        - server.avif
+        - yealink_phone.jpg
+    - csc/                  // "CSC" project
+      - csc_css.css         // Styles for CSC project
+      - csc_java.js         // Javascript for CSC project
+      - csc.html            // HTML for CSC project
+  - projects/               // Contains larger projects
+    - css/
+      - fellowship.css    // Styles for fellowship project
+      - fsusc_scraping.css // Styles for fsusc_scraping project
+      - mortgage.css      // Styles for mortgage project
+    - fellowship.html     // HTML for fellowship project
+    - fsusc_scraping.html // HTML for fsusc_scraping project
+    - html/
+      - fsusc_scraping_content.html // Content for fsusc_scraping project
+      - mortgage_content.html     // Content for mortgage project
+    - javascript/
+      - fellowship.js     // Javascript for fellowship project
+      - fsusc_scraping.js // Javascript for fsusc_scraping project
+      - mortgage.js       // Javascript for mortgage project
+      - navbar.js         // Navigation bar functionality
+    - mortgage.html       // HTML for mortgage project
+  - rules/                  // Contains project rules and documentation
+  - section/                // Section related assets
+    - css/
+      - colors.css        // Color definitions
+      - projects.css      // Styles for projects section
+    - html/
+    - javascript/
+      - projects.js       // Javascript for projects section
+      - utils.js          // Utility functions
+    - navbar.html         // Reusable header component with navigation, styles, and interactive logic
+    - projects.html       // Projects section page

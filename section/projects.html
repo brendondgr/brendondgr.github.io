@@ -15,6 +15,7 @@
     
     <!-- Bootstrap Icons (as you had it before) -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="/section/css/main.css">
 
     <style>
         /* Use Inter as the default font */
@@ -23,7 +24,7 @@
         }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-800">
+<body class="antialiased">
 
     <!-- This container will be populated by your projects.js -->
     <div id="navbar-container"></div>
@@ -32,14 +33,16 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         <!-- Hero Section -->
-        <header class="text-center pt-24 pb-12 md:pt-32 md:pb-16">
-            <h1 class="text-4xl md:text-5xl font-bold tracking-tight text-slate-900">
-                My Work &amp; Projects
-            </h1>
-            <p class="mt-4 max-w-2xl mx-auto text-lg text-slate-600">
-                A collection of projects I've built. These range from university assignments to personal endeavors, showcasing my skills in software development and research.
-            </p>
-        </header>
+        <div class="panel my-12 md:my-16">
+            <header class="text-center py-12 md:py-16">
+                <h1 class="text-4xl md:text-5xl font-bold tracking-tight text-white">
+                    My Work &amp; Projects
+                </h1>
+                <p class="mt-4 max-w-2xl mx-auto text-lg text-slate-400">
+                    A collection of projects I've built. These range from university assignments to personal endeavors, showcasing my skills in software development and research.
+                </p>
+            </header>
+        </div>
 
         <!-- Projects Grid -->
         <main id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pb-24">
@@ -51,5 +54,6 @@
     <!-- Note: You might need a 'utils.js' if it contains shared functions -->
     <!-- <script src="javascript/utils.js"></script> -->
     <script src="javascript/projects.js"></script>
+    <script src="/section/javascript/navbar-loader.js"></script>
 </body>
 </html>
