@@ -1,9 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="scroll-behavior: smooth;">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>All Tech'd Out - VOIP & IT Services in Lehigh Valley, PA</title>
+    <title>All Tech'd Out | VOIP Phone Systems & Small Business IT Support in Lehigh Valley, PA</title>
+    <meta name="description" content="All Tech'd Out provides VOIP phone systems and small business IT support for companies in the Lehigh Valley and throughout Pennsylvania.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.alltechdout.com">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="All Tech'd Out | VOIP Phone Systems & Small Business IT Support in Lehigh Valley, PA">
+    <meta property="og:description" content="Local VOIP and IT services partner for small businesses across the Lehigh Valley and Pennsylvania.">
+    <meta property="og:url" content="https://www.alltechdout.com">
+    <meta property="og:image" content="https://www.alltechdout.com/images/logo.svg">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="All Tech'd Out | VOIP Phone Systems & Small Business IT Support in Lehigh Valley, PA">
+    <meta name="twitter:description" content="Local VOIP and IT services partner for small businesses across the Lehigh Valley and Pennsylvania.">
+    <meta name="twitter:image" content="https://www.alltechdout.com/images/logo.svg">
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -15,6 +31,12 @@
     
     <!-- Custom Styles -->
     <link rel="stylesheet" href="ato.css">
+    
+    <style>
+        section {
+            scroll-margin-top: 80px;
+        }
+    </style>
 </head>
 <body class="bg-[#e9e0e0] text-[#4b0000]">
 
@@ -36,6 +58,10 @@
                 <a href="#about" class="text-[#e9e0e0] hover:text-[#f55353] transition duration-300 flex items-center space-x-1">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.205 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.523 5.795 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.795 5 16.5 5s3.332.477 4.5 1.253v13C19.832 18.523 18.205 18 16.5 18s-3.332.477-4.5 1.253" /></svg>
                     <span>Our Philosophy</span>
+                </a>
+                <a href="#faq" class="text-[#e9e0e0] hover:text-[#f55353] transition duration-300 flex items-center space-x-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                    <span>FAQ</span>
                 </a>
                 <a href="#contact" class="text-[#e9e0e0] hover:text-[#f55353] transition duration-300 flex items-center space-x-1">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
@@ -61,6 +87,10 @@
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.205 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.523 5.795 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.795 5 16.5 5s3.332.477 4.5 1.253v13C19.832 18.523 18.205 18 16.5 18s-3.332.477-4.5 1.253" /></svg>
                 <span>Our Philosophy</span>
             </a>
+            <a href="#faq" class="block py-2 text-[#e9e0e0] hover:text-[#f55353] flex items-center space-x-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                <span>FAQ</span>
+            </a>
             <a href="#contact" class="block py-2 text-[#e9e0e0] hover:text-[#f55353] flex items-center space-x-2">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
                 <span>Contact</span>
@@ -73,8 +103,8 @@
         <!-- Hero Section -->
         <section class="hero-bg text-white py-20 md:py-32">
             <div class="container mx-auto px-6 text-center">
-                <h2 class="text-4xl md:text-6xl font-bold leading-tight mb-4">Your Small Business Tech Partner in the Lehigh Valley</h2>
-                <p class="text-lg md:text-xl text-[#e9e0e0] mb-8 max-w-3xl mx-auto">From VOIP phone systems to full-scale business IT infrastructure, we provide reliable and professional technology services for small businesses throughout Pennsylvania.</p>
+                <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-4">VOIP Phone Systems & IT Support for Lehigh Valley Small Businesses</h1>
+                <p class="text-lg md:text-xl text-[#e9e0e0] mb-8 max-w-3xl mx-auto">All Tech'd Out is your local partner for VOIP phone systems, business phone services, and small business IT support in the Lehigh Valley and across Pennsylvania.</p>
                 <a href="#services" class="bg-[#f55353] text-white font-bold py-3 px-8 rounded-lg text-lg hover:bg-[#e44343] transition duration-300">Explore Our Services</a>
             </div>
         </section>
@@ -83,45 +113,45 @@
         <section id="services" class="py-20 bg-white">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-12">
-                    <h3 class="text-3xl md:text-4xl font-bold text-[#4b0000]">Comprehensive Tech Services</h3>
-                    <p class="text-lg text-[#4b0000] mt-2">Solutions for every technology challenge, big or small.</p>
+                    <h2 class="text-3xl md:text-4xl font-bold text-[#4b0000]">VOIP & Business Phone Services for Small Businesses</h2>
+                    <p class="text-lg text-[#4b0000] mt-2">Reliable VOIP phone systems and business communication solutions for small businesses in the Lehigh Valley and throughout Pennsylvania.</p>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <!-- Card 1: VOIP Services -->
                     <div class="bg-[#F4F0F0] p-8 rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
                         <div class="flex items-center justify-center h-16 w-16 bg-white text-[#f55353] rounded-full mb-4"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg></div>
-                        <h4 class="text-xl font-bold mb-2 text-[#4b0000]">VOIP Services</h4>
-                        <p class="text-[#4b0000]">Modernize your communication with our reliable VOIP solutions, tailored for the needs of small to medium-sized businesses.</p>
+                        <h3 class="text-xl font-bold mb-2 text-[#4b0000]">VOIP Phone Services</h3>
+                        <p class="text-[#4b0000]">Modernize your communication with reliable VOIP phone services designed specifically for small to medium-sized businesses in the Lehigh Valley and beyond.</p>
                     </div>
                     <!-- Card 2: Business Phone Access -->
                     <div class="bg-[#F4F0F0] p-8 rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
                         <div class="flex items-center justify-center h-16 w-16 bg-white text-[#f55353] rounded-full mb-4"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283-.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" /></svg></div>
-                        <h4 class="text-xl font-bold mb-2 text-[#4b0000]">Business Phone Access</h4>
-                        <p class="text-[#4b0000]">Get professional phone access for your entire team, whether they are in the office or working remotely.</p>
+                        <h3 class="text-xl font-bold mb-2 text-[#4b0000]">Business Phone Access</h3>
+                        <p class="text-[#4b0000]">Provide professional business phone access for your entire team, whether they are in the office or working remotely across Pennsylvania.</p>
                     </div>
                     <!-- Card 3: Voice Mail Features -->
                     <div class="bg-[#F4F0F0] p-8 rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
                         <div class="flex items-center justify-center h-16 w-16 bg-white text-[#f55353] rounded-full mb-4"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg></div>
-                        <h4 class="text-xl font-bold mb-2 text-[#4b0000]">Voice Mail Features</h4>
-                        <p class="text-[#4b0000]">Advanced voicemail options, including voicemail-to-email and custom greetings, to keep you connected with your clients.</p>
+                        <h3 class="text-xl font-bold mb-2 text-[#4b0000]">Voice Mail Features</h3>
+                        <p class="text-[#4b0000]">Advanced voicemail options, including voicemail-to-email and custom greetings, to keep you connected with clients wherever you do business.</p>
                     </div>
                     <!-- Card 4: Caller ID -->
                     <div class="bg-[#F4F0F0] p-8 rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
                         <div class="flex items-center justify-center h-16 w-16 bg-white text-[#f55353] rounded-full mb-4"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V8a2 2 0 00-2-2h-5m-4 0V5a2 2 0 012-2h4a2 2 0 012 2v1m-4 0h4" /></svg></div>
-                        <h4 class="text-xl font-bold mb-2 text-[#4b0000]">Caller ID</h4>
-                        <p class="text-[#4b0000]">Customizable Caller ID to ensure your business presents a professional and consistent identity to your customers.</p>
+                        <h3 class="text-xl font-bold mb-2 text-[#4b0000]">Caller ID</h3>
+                        <p class="text-[#4b0000]">Customizable Caller ID to ensure your small business presents a professional and consistent identity to your customers.</p>
                     </div>
                     <!-- Card 5: Forwarding Features -->
                     <div class="bg-[#F4F0F0] p-8 rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
                         <div class="flex items-center justify-center h-16 w-16 bg-white text-[#f55353] rounded-full mb-4"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg></div>
-                        <h4 class="text-xl font-bold mb-2 text-[#4b0000]">Forwarding Features</h4>
-                        <p class="text-[#4b0000]">Flexible call forwarding to any device, ensuring you never miss an important call, wherever you are.</p>
+                        <h3 class="text-xl font-bold mb-2 text-[#4b0000]">Forwarding Features</h3>
+                        <p class="text-[#4b0000]">Flexible call forwarding to any device, ensuring you never miss an important call, whether you're in the office or on the go.</p>
                     </div>
                     <!-- Card 6: Call Manager Dashboard -->
                     <div class="bg-[#F4F0F0] p-8 rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
                         <div class="flex items-center justify-center h-16 w-16 bg-white text-[#f55353] rounded-full mb-4"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg></div>
-                        <h4 class="text-xl font-bold mb-2 text-[#4b0000]">Call Manager Dashboard</h4>
-                        <p class="text-[#4b0000]">An intuitive dashboard to manage your calls, settings, and features with ease, putting you in complete control.</p>
+                        <h3 class="text-xl font-bold mb-2 text-[#4b0000]">Call Manager Dashboard</h3>
+                        <p class="text-[#4b0000]">An intuitive dashboard to manage your calls, settings, and features with ease, putting you in complete control of your business phone system.</p>
                     </div>
                 </div>
             </div>
@@ -131,16 +161,16 @@
         <section id="business" class="py-20 bg-[#e9e0e0]">
             <div class="container mx-auto px-6">
                  <div class="text-center mb-12">
-                    <h3 class="text-3xl md:text-4xl font-bold text-[#4b0000]">Proactive IT for Your Small Business</h3>
-                    <p class="text-lg text-[#4b0000] mt-2">Better than rescue, we prevent problems before they happen.</p>
+                    <h2 class="text-3xl md:text-4xl font-bold text-[#4b0000]">Proactive VOIP & IT Support for Your Small Business</h2>
+                    <p class="text-lg text-[#4b0000] mt-2">Better than rescue, we provide proactive VOIP and IT services that prevent problems before they happen for small businesses in the Lehigh Valley.</p>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                     <div>
                         <div class="relative w-full overflow-hidden rounded-lg shadow-xl" id="imageCarousel">
                             <div class="flex transition-transform duration-500 ease-in-out" style="transform: translateX(0%);" id="carousel-track">
-                                <img src="images/server.avif" alt="Business IT Solutions" class="w-full flex-shrink-0">
-                                <img src="images/yealink_phone.jpg" alt="Surveillance Camera Systems" class="w-full flex-shrink-0">
-                                <img src="images/computer.avif" alt="Computer Repair" class="w-full flex-shrink-0">
+                                <img src="images/server.avif" alt="Server infrastructure for small business IT support" class="w-full flex-shrink-0" loading="lazy">
+                                <img src="images/yealink_phone.jpg" alt="VOIP phone system for Lehigh Valley business" class="w-full flex-shrink-0" loading="lazy">
+                                <img src="images/computer.avif" alt="Managed computer and network services for small businesses" class="w-full flex-shrink-0" loading="lazy">
                             </div>
                             <button class="absolute top-1/2 left-4 -translate-y-1/2 bg-gray-800 bg-opacity-50 text-white p-2 rounded-full z-10 carousel-button" data-direction="prev">
                                 &#10094;
@@ -156,15 +186,15 @@
                         </div>
                     </div>
                     <div>
-                        <h4 class="text-2xl font-semibold text-[#4b0000] mb-4">Advanced VOIP Features for Your Business</h4>
-                        <p class="text-[#4b0000] mb-6">Our VOIP phone systems come packed with features to enhance your business communication and productivity. We provide everything you need to keep your small business connected.</p>
+                        <h3 class="text-2xl font-semibold text-[#4b0000] mb-4">Advanced VOIP & IT Features for Your Business</h3>
+                        <p class="text-[#4b0000] mb-6">Our VOIP phone systems and small business IT support services come packed with features to enhance your business communication and productivity. We provide everything you need to keep your Lehigh Valley small business connected and secure.</p>
                         <ul class="space-y-4 text-[#4b0000] icon-list">
-                            <li><strong>VOIP Services:</strong> Crystal-clear voice quality over your internet connection.</li>
-                            <li><strong>Business Phone Access:</strong> Full-featured phone access for your entire team, in-office or remote.</li>
-                            <li><strong>Voice Mail Features:</strong> Voicemail-to-email, custom greetings, and more.</li>
-                            <li><strong>Caller ID:</strong> Professional and customizable caller ID for all outgoing calls.</li>
-                            <li><strong>Forwarding Features:</strong> Never miss a call with flexible forwarding to any device.</li>
-                            <li><strong>Call Manager Dashboard:</strong> Easy-to-use dashboard to manage your calls and settings.</li>
+                            <li><strong>VOIP Services:</strong> Crystal-clear voice quality over your internet connection, optimized for small businesses.</li>
+                            <li><strong>Business Phone Access:</strong> Full-featured phone access for your entire team, in-office or remote across Pennsylvania.</li>
+                            <li><strong>Voice Mail Features:</strong> Voicemail-to-email, custom greetings, and more to help you respond quickly.</li>
+                            <li><strong>Caller ID:</strong> Professional and customizable caller ID for all outgoing business calls.</li>
+                            <li><strong>Forwarding Features:</strong> Never miss a call with flexible forwarding to any device or remote worker.</li>
+                            <li><strong>Call Manager Dashboard:</strong> Easy-to-use dashboard to manage your calls, extensions, and settings.</li>
                         </ul>
                     </div>
                 </div>
@@ -176,11 +206,11 @@
             <div class="container mx-auto px-6">
                 <div class="lg:flex lg:items-center lg:gap-16">
                     <div class="lg:w-1/2">
-                        <h3 class="text-3xl md:text-4xl font-bold text-[#4b0000]">Our Philosophy: People First, Technology Second</h3>
+                        <h2 class="text-3xl md:text-4xl font-bold text-[#4b0000]">Our Philosophy: People First, Technology Second</h2>
                         
                         <div class="mt-6 space-y-6">
                             <div class="bg-[#F4F0F0] p-6 rounded-lg border-l-4 border-[#f55353] philosophy-item">
-                                <h4 class="text-xl font-semibold text-[#4b0000] mb-2 flex items-center">
+                                <h3 class="text-xl font-semibold text-[#4b0000] mb-2 flex items-center">
                                     <span class="inline-block w-2 h-2 bg-[#f55353] rounded-full mr-3"></span>
                                     Local Professionals, Not a Franchise
                                 </h4>
@@ -188,7 +218,7 @@
                             </div>
                             
                             <div class="bg-[#F4F0F0] p-6 rounded-lg border-l-4 border-[#f55353] philosophy-item">
-                                <h4 class="text-xl font-semibold text-[#4b0000] mb-2 flex items-center">
+                                <h3 class="text-xl font-semibold text-[#4b0000] mb-2 flex items-center">
                                     <span class="inline-block w-2 h-2 bg-[#f55353] rounded-full mr-3"></span>
                                     Maximize What You Have
                                 </h4>
@@ -196,7 +226,7 @@
                             </div>
                             
                             <div class="bg-[#F4F0F0] p-6 rounded-lg border-l-4 border-[#f55353] philosophy-item">
-                                <h4 class="text-xl font-semibold text-[#4b0000] mb-2 flex items-center">
+                                <h3 class="text-xl font-semibold text-[#4b0000] mb-2 flex items-center">
                                     <span class="inline-block w-2 h-2 bg-[#f55353] rounded-full mr-3"></span>
                                     Bridging the Gap
                                 </h4>
@@ -205,8 +235,35 @@
                         </div>
                     </div>
                     <div class="mt-8 lg:mt-0 lg:w-1/2">
-                        <img src="images/handshake.avif" alt="Consultant explaining tech to a client" class="rounded-lg shadow-2xl w-full h-auto">
+                        <img src="images/handshake.avif" alt="Local IT and VOIP consultant explaining technology to a small business owner" class="rounded-lg shadow-2xl w-full h-auto" loading="lazy">
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="py-20 bg-[#e9e0e0]">
+            <div class="container mx-auto px-6">
+                <div class="max-w-3xl mx-auto">
+                    <h2 class="text-3xl md:text-4xl font-bold text-[#4b0000] mb-12 text-center">Frequently Asked Questions</h2>
+                    <dl class="space-y-6">
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <dt class="font-semibold text-[#4b0000] text-lg mb-2">Which areas do you serve?</dt>
+                            <dd class="text-[#4b0000]">We primarily serve small businesses in the Lehigh Valley region and throughout Pennsylvania, with remote support available for distributed teams.</dd>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <dt class="font-semibold text-[#4b0000] text-lg mb-2">What types of small businesses do you work with?</dt>
+                            <dd class="text-[#4b0000]">We partner with offices, clinics, professional services, trades, and other small to medium-sized businesses that need reliable VOIP phone systems and IT support.</dd>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <dt class="font-semibold text-[#4b0000] text-lg mb-2">Can you support remote and hybrid teams?</dt>
+                            <dd class="text-[#4b0000]">Yes. Our VOIP and IT solutions are designed to support staff working in the office, from home, or on the road.</dd>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <dt class="font-semibold text-[#4b0000] text-lg mb-2">What is included in a typical VOIP setup?</dt>
+                            <dd class="text-[#4b0000]">A typical setup includes business phone numbers, desk or soft phones, voicemail features, caller ID, forwarding rules, and a call manager dashboard tailored to your needs.</dd>
+                        </div>
+                    </dl>
                 </div>
             </div>
         </section>
@@ -215,17 +272,17 @@
         <section id="contact" class="py-20 bg-[#4b0000] text-white">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-12">
-                    <h3 class="text-3xl md:text-4xl font-bold">Get in Touch</h3>
-                    <p class="text-lg text-[#e9e0e0] mt-2">Have a question or need support? We're here to help.</p>
+                    <h2 class="text-3xl md:text-4xl font-bold">Get in Touch with All Tech'd Out</h2>
+                    <p class="text-lg text-[#e9e0e0] mt-2">Have a question or need VOIP or IT support for your Lehigh Valley small business? We're here to help.</p>
                 </div>
                 <div class="flex flex-col md:flex-row justify-center items-center gap-8">
                     <div class="flex items-center space-x-2">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
-                        <a href="tel:+15551234567" class="text-lg text-[#e9e0e0] hover:text-white transition duration-300">(555) 123-4567</a>
+                        <a href="tel:+16108140888" class="text-lg text-[#e9e0e0] hover:text-white transition duration-300">(610) 814-0888</a>
                     </div>
                     <div class="flex items-center space-x-2">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
-                        <a href="mailto:support@alltechdout.com" class="text-lg text-[#e9e0e0] hover:text-white transition duration-300">support@alltechdout.com</a>
+                        <a href="mailto:Sales@alltechdout.com" class="text-lg text-[#e9e0e0] hover:text-white transition duration-300">Sales@alltechdout.com</a>
                     </div>
                 </div>
             </div>
@@ -233,17 +290,39 @@
 
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-[#290000] text-white py-8">
-        <div class="container mx-auto px-6 text-center border-t border-[#784040] pt-8">
-            <p>&copy; 2025 All Tech'd Out. All Rights Reserved.</p>
-            <p class="text-[#a58080] mt-1">Serving the Greater Lehigh Valley Region and beyond, including Pennsylvania.</p>
-            <p class="text-[#8a7070] mt-4 text-sm">Website created by <a href="https://brendondgr.github.io" class="text-[#9a8080] hover:text-[#a58080] transition duration-300">Brendon DGR</a></p>
-        </div>
-    </footer>
+        <!-- Footer -->
+        <footer class="bg-[#290000] text-white py-8">
+                <div class="container mx-auto px-6 text-center border-t border-[#784040] pt-8">
+                        <p>&copy; 2025 All Tech'd Out. All Rights Reserved.</p>
+                        <p class="text-[#a58080] mt-1">Serving the Greater Lehigh Valley Region and beyond, including Pennsylvania.</p>
+                </div>
+        </footer>
     
-    <!-- Custom JavaScript -->
-    <script src="ato.js"></script>
+        <!-- Custom JavaScript -->
+        <script src="ato.js" defer></script>
+
+        <!-- Structured Data -->
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "All Tech'd Out",
+            "url": "https://www.alltechdout.com",
+            "image": "https://www.alltechdout.com/images/logo.svg",
+            "description": "All Tech'd Out provides VOIP phone systems and small business IT support for companies in the Lehigh Valley and throughout Pennsylvania.",
+            "telephone": "+1-610-814-0888",
+            "email": "Sales@alltechdout.com",
+            "areaServed": {
+                "@type": "AdministrativeArea",
+                "name": "Lehigh Valley, Pennsylvania"
+            },
+            "address": {
+                "@type": "PostalAddress",
+                "addressRegion": "PA",
+                "addressCountry": "US"
+            }
+        }
+        </script>
 </body>
 </html>
 
