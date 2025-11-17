@@ -3,46 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>All Tech'd Out - PC Repair & Business IT Services in the Lehigh Valley, PA</title>
+    <title>All Tech'd Out - VOIP & IT Services in Lehigh Valley, PA</title>
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Google Fonts: Inter -->
+    <!-- Google Fonts: Roboto -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     
     <!-- Custom Styles -->
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            scroll-behavior: smooth;
-        }
-        .hero-bg {
-            background-color: #4b0000; /* Black Bean */
-            background-image: linear-gradient(rgba(75, 0, 0, 0.8), rgba(75, 0, 0, 0.8)), url('images/security.avif');
-            background-size: cover;
-            background-position: center;
-        }
-        .icon-list li {
-            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%23f55353'%3E%3Cpath fill-rule='evenodd' d='M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z' clip-rule='evenodd' /%3E%3C/svg%3E") no-repeat left center;
-            background-size: 1.25em;
-            padding-left: 2em;
-        }
-        .dot.active {
-            background-color: #f55353;
-            opacity: 1;
-        }
-    </style>
+    <link rel="stylesheet" href="ato.css">
 </head>
 <body class="bg-[#e9e0e0] text-[#4b0000]">
 
     <!-- Header & Navigation -->
     <header class="bg-[#290000] shadow-md sticky top-0 z-50">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <h1 class="text-2xl font-bold text-white">
-                <a href="#">All Tech'd Out</a>
+            <h1 class="text-2xl font-bold text-white flex items-center space-x-3">
+                <img src="images/logo.svg" alt="All Tech'd Out Logo" class="logo-hover">
             </h1>
             <div class="hidden md:flex space-x-6">
                 <a href="#services" class="text-[#e9e0e0] hover:text-[#f55353] transition duration-300 flex items-center space-x-1">
@@ -152,7 +132,7 @@
             <div class="container mx-auto px-6">
                  <div class="text-center mb-12">
                     <h3 class="text-3xl md:text-4xl font-bold text-[#4b0000]">Proactive IT for Your Small Business</h3>
-                    <p class="text-lg text-[#4b0000] mt-2">Better than rescue—we prevent problems before they happen.</p>
+                    <p class="text-lg text-[#4b0000] mt-2">Better than rescue, we prevent problems before they happen.</p>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                     <div>
@@ -197,7 +177,32 @@
                 <div class="lg:flex lg:items-center lg:gap-16">
                     <div class="lg:w-1/2">
                         <h3 class="text-3xl md:text-4xl font-bold text-[#4b0000]">Our Philosophy: People First, Technology Second</h3>
-                        <p class="mt-4 text-lg text-[#4b0000]">We are seasoned, local professionals—not a franchise—with consultants focused on customer communication and genuine concern for your well-being. We avoid "geek speak" and explain technology in terms you can understand, so you feel comfortable and empowered. Before you make large, expensive changes, call us for a consultation—we can often identify ways to maximize your existing resources rather than simply replacing them, bridging the gap between the techies and the business people.</p>
+                        
+                        <div class="mt-6 space-y-6">
+                            <div class="bg-[#F4F0F0] p-6 rounded-lg border-l-4 border-[#f55353] philosophy-item">
+                                <h4 class="text-xl font-semibold text-[#4b0000] mb-2 flex items-center">
+                                    <span class="inline-block w-2 h-2 bg-[#f55353] rounded-full mr-3"></span>
+                                    Local Professionals, Not a Franchise
+                                </h4>
+                                <p class="text-lg text-[#4b0000]">We are seasoned, local professionals with consultants focused on customer communication and genuine concern for your well-being.</p>
+                            </div>
+                            
+                            <div class="bg-[#F4F0F0] p-6 rounded-lg border-l-4 border-[#f55353] philosophy-item">
+                                <h4 class="text-xl font-semibold text-[#4b0000] mb-2 flex items-center">
+                                    <span class="inline-block w-2 h-2 bg-[#f55353] rounded-full mr-3"></span>
+                                    Maximize What You Have
+                                </h4>
+                                <p class="text-lg text-[#4b0000]">Before you make large, expensive changes, call us for a consultation. We can often identify ways to maximize your existing resources rather than simply replacing them.</p>
+                            </div>
+                            
+                            <div class="bg-[#F4F0F0] p-6 rounded-lg border-l-4 border-[#f55353] philosophy-item">
+                                <h4 class="text-xl font-semibold text-[#4b0000] mb-2 flex items-center">
+                                    <span class="inline-block w-2 h-2 bg-[#f55353] rounded-full mr-3"></span>
+                                    Bridging the Gap
+                                </h4>
+                                <p class="text-lg text-[#4b0000]">We bridge the gap between the techies and the business people, ensuring technology works for your business goals.</p>
+                            </div>
+                        </div>
                     </div>
                     <div class="mt-8 lg:mt-0 lg:w-1/2">
                         <img src="images/handshake.avif" alt="Consultant explaining tech to a client" class="rounded-lg shadow-2xl w-full h-auto">
@@ -233,76 +238,12 @@
         <div class="container mx-auto px-6 text-center border-t border-[#784040] pt-8">
             <p>&copy; 2025 All Tech'd Out. All Rights Reserved.</p>
             <p class="text-[#a58080] mt-1">Serving the Greater Lehigh Valley Region and beyond, including Pennsylvania.</p>
+            <p class="text-[#8a7070] mt-4 text-sm">Website created by <a href="https://brendondgr.github.io" class="text-[#9a8080] hover:text-[#a58080] transition duration-300">Brendon DGR</a></p>
         </div>
     </footer>
     
-    <script>
-        // Simple script for mobile menu toggle
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        // Close mobile menu when a link is clicked
-        document.querySelectorAll('#mobile-menu a').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-            });
-        });
-
-        // Image Carousel Logic
-        const carouselTrack = document.getElementById('carousel-track');
-        const carouselButtons = document.querySelectorAll('.carousel-button');
-        const carouselDots = document.querySelectorAll('.dot');
-        let currentIndex = 0;
-        let autoSlideInterval;
-
-        function updateCarousel() {
-            carouselTrack.style.transform = `translateX(${-currentIndex * 100}%)`;
-            carouselDots.forEach((dot, index) => {
-                if (index === currentIndex) {
-                    dot.classList.add('active');
-                } else {
-                    dot.classList.remove('active');
-                }
-            });
-        }
-
-        function startAutoSlide() {
-            clearInterval(autoSlideInterval); // Clear any existing interval
-            autoSlideInterval = setInterval(() => {
-                currentIndex = (currentIndex + 1) % carouselDots.length;
-                updateCarousel();
-            }, 5000); // Change image every 5 seconds
-        }
-
-        carouselButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                const direction = button.dataset.direction;
-                if (direction === 'prev') {
-                    currentIndex = (currentIndex - 1 + carouselDots.length) % carouselDots.length;
-                } else {
-                    currentIndex = (currentIndex + 1) % carouselDots.length;
-                }
-                updateCarousel();
-                startAutoSlide(); // Reset auto-slide on manual interaction
-            });
-        });
-
-        carouselDots.forEach(dot => {
-            dot.addEventListener('click', (event) => {
-                currentIndex = parseInt(event.target.dataset.index);
-                updateCarousel();
-                startAutoSlide(); // Reset auto-slide on manual interaction
-            });
-        });
-
-        // Initialize carousel and start auto-slide
-        updateCarousel();
-        startAutoSlide();
-    </script>
+    <!-- Custom JavaScript -->
+    <script src="ato.js"></script>
 </body>
 </html>
 
