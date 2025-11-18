@@ -7,7 +7,7 @@ body {
 /* Hero Background */
 .hero-bg {
     background-color: #4b0000; /* Black Bean */
-    background-image: linear-gradient(rgba(75, 0, 0, 0.8), rgba(75, 0, 0, 0.8)), url('images/security.avif');
+    background-image: linear-gradient(rgba(75, 0, 0, 0.4), rgba(75, 0, 0, 0.8)), url('images/laptop.avif');
     background-size: cover;
     background-position: center;
 }
