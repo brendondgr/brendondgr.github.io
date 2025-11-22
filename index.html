@@ -122,45 +122,43 @@
             <div class="absolute inset-0 z-0 bg-[#0d1117]">
                 <img src="images/hero_backdrop.avif" 
                     alt="Abstract technology background" 
-                    class="w-full h-full object-cover"
-                    style="-webkit-mask-image: radial-gradient(circle, black 40%, transparent 100%); mask-image: radial-gradient(circle, black 40%, transparent 100%);"
+                    class="w-full h-full object-cover opacity-60"
                     onerror="this.onerror=null;this.src='https://placehold.co/1920x1080/0d1117/c9d1d9?text=Image+Not+Found';">
-                <div class="absolute inset-0 bg-gradient-to-b from-black/75 via-black/80 to-[#0d1117]"></div>
+                <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-[#0d1117]"></div>
             </div>
             
             <!-- Hero Content -->
-            <div class="relative z-10 max-w-screen-xl mx-auto px-4 py-12 lg:py-20">
-                <div class="grid md:grid-cols-2 gap-12 items-center">
-                    <!-- Left Column: PFP, Name, Title -->
-                    <div class="flex flex-col items-center text-center">
-                        <div class="relative w-48 h-48 md:w-64 md:h-64 mb-6">
-                            <div class="absolute inset-0 border-2 rounded-full accent-border animate-pulse"></div>
-                            <img src="images/pfp.jpg" alt="Brendon DGR" class="rounded-full w-full h-full object-cover p-2 bg-[#0d1117]">
-                        </div>
-                        <h1 class="text-4xl md:text-5xl font-bold tracking-tight text-white mb-2">
-                            Brendon DGR
-                        </h1>
-                        <p class="text-xl text-sky-400 font-mono">Researcher & Graduate Student</p>
-                    </div>
+            <div class="relative z-10 max-w-4xl mx-auto px-4 py-12 lg:py-20 flex flex-col items-center text-center">
+                <!-- Profile Picture -->
+                <div class="relative w-40 h-40 md:w-56 md:h-56 mb-8">
+                    <div class="absolute inset-0 border-2 rounded-full accent-border animate-pulse"></div>
+                    <img src="images/pfp.jpg" alt="Brendon DGR" class="rounded-full w-full h-full object-cover p-2 bg-[#0d1117] shadow-2xl">
+                </div>
 
-                    <!-- Right Column: About Me, Description, Button -->
-                    <div class="flex flex-col items-center text-center">
-                        <h2 class="text-3xl font-bold text-white mb-6">
-                            <span class="accent-glow">//</span> About Me
-                        </h2>
-                        <div class="space-y-4 text-slate-200 text-lg mb-8 max-w-lg">
-                            <p>
-                                My focus is to create efficient systems involving the use of Artificial Intelligence in Healthcare. My goal is to ensure Medical Professionals have the tools available to assist them in their daily work so they can focus on their patients.
-                            </p>
-                        </div>
-                        <div>
-                            <a href="#projects" class="inline-block btn-primary font-medium text-lg px-8 py-4 rounded-lg">
-                                Explore My Work
-                            </a>
-                        </div>
-                    </div>
+                <!-- Name & Title -->
+                <h1 class="text-5xl md:text-7xl font-bold tracking-tight text-white mb-4">
+                    Brendon DGR
+                </h1>
+                <p class="text-xl md:text-2xl text-sky-400 font-mono mb-8">Researcher & Graduate Student</p>
+
+                <!-- About Me (Simplified) -->
+                <div class="max-w-2xl text-slate-300 text-lg md:text-xl leading-relaxed mb-10">
+                    <p>
+                        Creating efficient systems involving Artificial Intelligence in Healthcare. 
+                        Empowering medical professionals with tools to focus on what matters most—their patients.
+                    </p>
+                </div>
+
+                <!-- CTA Button -->
+                <div>
+                    <a href="#projects" class="inline-block btn-primary font-medium text-lg px-10 py-4 rounded-full shadow-lg hover:shadow-sky-500/20 transition-all duration-300 transform hover:-translate-y-1">
+                        Explore My Work
+                    </a>
                 </div>
             </div>
+
+            <!-- Bottom Fade Transition -->
+            <div class="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-[#0d1117] to-transparent z-20"></div>
         </section>
 
         <!-- Container for sections with particle background -->

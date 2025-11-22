@@ -6,7 +6,8 @@ body {
 
 /* Hero Background */
 .hero-bg {
-    background-color: #4b0000; /* Black Bean */
+    background-color: #4b0000;
+    /* Black Bean */
     background-image: linear-gradient(rgba(75, 0, 0, 0.4), rgba(75, 0, 0, 0.8)), url('images/laptop.avif');
     background-size: cover;
     background-position: center;
@@ -18,6 +19,7 @@ body {
     width: auto;
     transition: filter 1s ease;
 }
+
 .logo-hover:hover {
     filter: drop-shadow(0 0 3px rgba(255, 122, 122, 0.8)) drop-shadow(0 0 5px rgba(245, 83, 83, 0.6));
 }
@@ -27,6 +29,7 @@ body {
     transition: all 0.4s ease;
     cursor: pointer;
 }
+
 .icon-list li:hover {
     color: #f55353;
     transform: translateX(4px);
@@ -39,6 +42,7 @@ body {
     transition: transform 0.3s ease;
     cursor: pointer;
 }
+
 .philosophy-item:hover {
     transform: translateX(12px);
 }
