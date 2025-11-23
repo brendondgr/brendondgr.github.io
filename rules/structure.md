@@ -11,7 +11,7 @@
     - Fellowship.csv      // Fellowship data
     - Projects.csv        // Project data
   - images/                 // Contains image assets
-    - computer_vision.avif
+    - computer_vision.jpg
     - fellowship/           // Fellowship specific images
       - image1.png
       - image2.png
@@ -21,8 +21,8 @@
     - Fellowship_small.png
     - fellowship.png
     - fellowshipfinder.png
-    - game_development.avif
-    - hero_backdrop.avif
+    - game_development.jpg
+    - hero_backdrop.jpg
     - hero.png
     - logo.png
     - mortgage.jpg
@@ -35,12 +35,12 @@
     - alltechdout/          // "All Tech'd Out" project
       - ato.html            // HTML for All Tech'd Out
       - images/             // Images for All Tech'd Out
-        - camera.avif
-        - computer.avif
+        - camera.jpg
+        - computer.jpg
         - googlemaps.png
-        - handshake.avif
-        - security.avif
-        - server.avif
+        - handshake.jpg
+        - security.jpg
+        - server.jpg
         - yealink_phone.jpg
     - csc/                  // "CSC" project
       - csc_css.css         // Styles for CSC project
