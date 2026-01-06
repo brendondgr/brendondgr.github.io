@@ -64,3 +64,12 @@ This script is responsible for dynamically loading, filtering, and displaying co
     - Includes robust error handling to inform the user if course data cannot be loaded.
 
 
+## projects/llama_cpp_wrapper.html, projects/petunia.html, projects/manny_manatee.html, projects/magnification_job_finder.html, projects/project_peach.html, projects/project_mango.html, projects/project_mimic_iv.html
+
+### HTML Structure
+
+These files provide placeholder detail views for the newly added projects. Each follow a consistent structure:
+- **Navbar**: Loads the shared navigation bar.
+- **Header**: Displays the project title, status (if applicable), and a brief description.
+- **Project Info**: Includes "About The Project" and "Key Features" sections with descriptive text.
+- **GitHub Link**: A placeholder button linking to the project's source code.

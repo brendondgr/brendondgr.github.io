@@ -53,15 +53,14 @@
       - mortgage.css      // Styles for mortgage project
     - fellowship.html     // HTML for fellowship project
     - fsusc_scraping.html // HTML for fsusc_scraping project
-    - html/
-      - fsusc_scraping_content.html // Content for fsusc_scraping project
-      - mortgage_content.html     // Content for mortgage project
-    - javascript/
-      - fellowship.js     // Javascript for fellowship project
-      - fsusc_scraping.js // Javascript for fsusc_scraping project
-      - mortgage.js       // Javascript for mortgage project
-      - navbar.js         // Navigation bar functionality
+    - llama_cpp_wrapper.html // HTML for llama_cpp_wrapper project
+    - magnification_job_finder.html // HTML for magnification_job_finder project
+    - manny_manatee.html // HTML for manny_manatee project
     - mortgage.html       // HTML for mortgage project
+    - petunia.html // HTML for petunia project
+    - project_mango.html // HTML for project_mango project
+    - project_mimic_iv.html // HTML for project_mimic_iv project
+    - project_peach.html // HTML for project_peach project
   - rules/                  // Contains project rules and documentation
   - section/                // Section related assets
     - css/

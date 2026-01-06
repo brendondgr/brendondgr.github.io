@@ -1,4 +1,11 @@
-﻿title,tags,description,github,html,logo
-FSU-SC Scraping,"Python, Scraping",Scrapes the entirety of the FSU Scientific Computing departments website and then groups/summarizes groups of text into LaTeX code. It then combines these parts of LaTeX code to then create a pdf with all the required information.,https://github.com/brendondgr/FSUSC-scraping,fsusc_scraping.html,
-House Calculators,"JS, Tailwind","Can be used to calculate house affordability based on multiple factors. Also utilized for amortization schedule for a mortgage. Written in Python orginally, but rewritten with Javascript and Tailwind CSS interface.",https://github.com/brendondgr/brendondgr.github.io/blob/main/projects/javascript/mortgage.js,mortgage.html,mortgage.jpg
-Fellowship Finder,"Scraping, Flask","This project can be used to find fellowships. Currently only looks at Profellow.com, however it will be expanded over time. Has a flask interface, along with Discord functionality hook-up with my Discord Bot ""Curator"".",https://github.com/brendondgr/Fellowship-Finder,fellowship.html,fellowshipfinder.png
+﻿title,tags,description,github,html,logo,status
+FSU-SC Scraping,"Python, Scraping",Scrapes the entirety of the FSU Scientific Computing departments website and then groups/summarizes groups of text into LaTeX code. It then combines these parts of LaTeX code to then create a pdf with all the required information.,https://github.com/brendondgr/FSUSC-scraping,fsusc_scraping.html,,current
+House Calculators,"JS, Tailwind","Can be used to calculate house affordability based on multiple factors. Also utilized for amortization schedule for a mortgage. Written in Python orginally, but rewritten with Javascript and Tailwind CSS interface.",https://github.com/brendondgr/brendondgr.github.io/blob/main/projects/javascript/mortgage.js,mortgage.html,mortgage.jpg,current
+Fellowship Finder,"Scraping, Flask","This project can be used to find fellowships. Currently only looks at Profellow.com, however it will be expanded over time. Has a flask interface, along with Discord functionality hook-up with my Discord Bot ""Curator"".",https://github.com/brendondgr/Fellowship-Finder,fellowship.html,fellowshipfinder.png,current
+Llama CPP Wrapper,"Django, Flask",A wrapper for llama.cpp using Django and Flask for local LLM serving.,#,llama_cpp_wrapper.html,,current
+Petunia,CharacterAI Clone,A CharacterAI clone with personality-driven agents.,#,petunia.html,,current
+Manny the Manatee,Discord Agent,An autonomous Discord agent with specialized tools.,#,manny_manatee.html,,current
+Magnification Job Finder,Scraping,Scrapes job boards for specific magnification-related roles.,#,magnification_job_finder.html,,current
+Project Peach,Calendar Clone,A feature-rich calendar clone for personal scheduling.,#,project_peach.html,,current
+Project Mango,Custom Agent,A custom autonomous agent for local task automation.,#,project_mango.html,,upcoming
+Project MIMIC-IV,Health Data,Analyzing and visualizing MIMIC-IV health data.,#,project_mimic_iv.html,,upcoming

@@ -88,10 +88,14 @@ async function loadProjects() {
 
             const imageUrl = project.logo ? `../images/${project.logo}` : `https://placehold.co/600x400/334155/FFFFFF?text=${encodeURIComponent(project.title)}`;
 
+            const isUpcoming = project.status === 'upcoming';
+            const statusBadge = isUpcoming ? `<span class="bg-amber-600 text-white px-2 py-1 text-xs font-bold rounded-md uppercase tracking-wider mb-2 self-start">Upcoming</span>` : '';
+
             projectCard.innerHTML = `
                 <img class="w-full h-48 object-cover" src="${imageUrl}" alt="${project.title} project image" onerror="this.onerror=null;this.src='https://placehold.co/600x400/e2e8f0/475569?text=Image+Not+Found';">
                 <div class="flex flex-col flex-grow">
-                    <div class="p-6 flex-grow">
+                    <div class="p-6 flex-grow flex flex-col">
+                        ${statusBadge}
                         <div class="flex items-center justify-between">
                             <h3 class="text-xl font-semibold text-white">${project.title}</h3>
                             <div class="flex flex-wrap gap-2 justify-end flex-shrink-0 ml-4">
