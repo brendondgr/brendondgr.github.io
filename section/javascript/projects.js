@@ -208,7 +208,7 @@ async function loadProjects() {
             throw new Error('Network response was not ok ' + response.statusText);
         }
         const csvData = await response.text();
-        const projects = parseCSV(csvData);
+        const projects = parseCSV(csvData).reverse();
 
         const featuredContainer = document.getElementById('featured-projects');
         const allProjectsContainer = document.getElementById('all-projects');
