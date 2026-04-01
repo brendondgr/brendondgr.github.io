@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Brendon DGR</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/section/css/main.css">
+    <style>
+        /* Scroll reveal animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Particles.js background container styling */
+        #particles-js-container {
+            position: relative;
+            z-index: 1;
+        }
+        #particles-js {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+
+        /* Form input styling */
+        .form-input {
+            background: rgba(13, 17, 23, 0.8);
+            border: 1px solid rgba(48, 54, 61, 0.5);
+            color: #c9d1d9;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        .form-input:focus {
+            outline: none;
+            border-color: #58a6ff;
+            box-shadow: 0 0 0 2px rgba(88, 166, 255, 0.2);
+        }
+
+        /* Social links hover effect */
+        .social-link {
+            transition: all 0.3s ease;
+        }
+        .social-link:hover {
+            color: #58a6ff;
+            transform: translateY(-3px);
+            text-shadow: 0 0 8px rgba(88, 166, 255, 0.3);
+        }
+    </style>
+</head>
+<body class="antialiased text-slate-300">
+
+    <!-- Placeholder for Navbar -->
+    <div id="navbar-container"></div>
+
+    <main id="particles-js-container" class="min-h-screen pt-24 pb-12">
+        <div id="particles-js"></div>
+
+        <div class="max-w-screen-xl mx-auto px-4">
+            <!-- Hero Section -->
+            <div class="text-center mb-16 reveal">
+                <h1 class="text-4xl md:text-6xl font-bold text-white mb-6">
+                    <span class="accent-glow">//</span> Get In Touch
+                </h1>
+                <p class="text-xl text-slate-400 max-w-2xl mx-auto leading-relaxed">
+                    Have a question, a research inquiry, or a collaboration proposal? 
+                    I'm always looking for new opportunities to work on exciting projects.
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-12 gap-12">
+                <!-- Contact Information & Socials -->
+                <div class="lg:col-span-5 space-y-8 reveal">
+                    <div class="glass-container p-8 md:p-10 h-full">
+                        <h2 class="text-2xl font-bold text-white mb-8 flex items-center">
+                            <i class="fas fa-paper-plane text-sky-400 mr-4"></i> Contact Info
+                        </h2>
+                        
+                        <div class="space-y-8">
+                            <!-- Email -->
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 bg-sky-900/30 rounded-lg flex items-center justify-center text-sky-400 flex-shrink-0">
+                                    <i class="fas fa-envelope text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-white font-bold mb-1">Email Me</h4>
+                                    <a href="mailto:brendondgr@gmail.com" class="text-slate-400 hover:text-sky-400 transition-colors break-all">
+                                        brendondgr@gmail.com
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- Removed Location as per user request -->
+                        </div>
+
+                        <div class="mt-12">
+                            <h3 class="text-lg font-bold text-white mb-6">Connect with me</h3>
+                            <div class="flex space-x-6 text-2xl">
+                                <a href="https://github.com/brendondgr" target="_blank" class="social-link" title="GitHub">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="https://linkedin.com/in/brendondgr" target="_blank" class="social-link" title="LinkedIn">
+                                    <i class="fab fa-linkedin"></i>
+                                </a>
+                                <!-- Removed Twitter as per user request -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="lg:col-span-7 reveal">
+                    <div class="glass-container p-8 md:p-10">
+                        <h2 class="text-2xl font-bold text-white mb-8 flex items-center">
+                            <i class="fas fa-envelope-open-text text-sky-400 mr-4"></i> Send a Message
+                        </h2>
+                        
+                        <form id="contact-form" action="#" class="space-y-6">
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div class="space-y-2">
+                                    <label for="name" class="text-sm font-medium text-slate-400 ml-1">Your Name</label>
+                                    <input type="text" id="name" name="name" required 
+                                        class="form-input w-full px-4 py-3 rounded-lg" placeholder="John Doe">
+                                </div>
+                                <div class="space-y-2">
+                                    <label for="email" class="text-sm font-medium text-slate-400 ml-1">Your Email</label>
+                                    <input type="email" id="email" name="email" required 
+                                        class="form-input w-full px-4 py-3 rounded-lg" placeholder="john@example.com">
+                                </div>
+                            </div>
+                            
+                            <div class="space-y-2">
+                                <label for="subject" class="text-sm font-medium text-slate-400 ml-1">Subject</label>
+                                <input type="text" id="subject" name="subject" required 
+                                    class="form-input w-full px-4 py-3 rounded-lg" placeholder="Research Collaboration">
+                            </div>
+
+                            <div class="space-y-2">
+                                <label for="message" class="text-sm font-medium text-slate-400 ml-1">Message</label>
+                                <textarea id="message" name="message" rows="5" required 
+                                    class="form-input w-full px-4 py-3 rounded-lg resize-none" placeholder="Hello, I'd like to discuss..."></textarea>
+                            </div>
+
+                            <button type="submit" class="btn-primary w-full py-4 rounded-lg font-bold text-lg flex items-center justify-center space-x-2">
+                                <span>Send Message</span>
+                                <i class="fas fa-paper-plane text-sm"></i>
+                            </button>
+                        </form>
+                        <div id="form-status" class="mt-4 text-center hidden">
+                            <p class="text-green-400 font-medium">Thank you! Your message has been sent.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-transparent mt-12 py-8">
+        <div class="max-w-screen-xl mx-auto px-4 text-center text-slate-500 text-sm">
+            <p>&copy; 2025 Brendon DGR All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JS Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="/section/javascript/navbar-loader.js"></script>
+    
+    <!-- Page Logic -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // --- Particles.js Initialization ---
+            particlesJS('particles-js', {
+                "particles": {
+                    "number": { "value": 60, "density": { "enable": true, "value_area": 800 } },
+                    "color": { "value": "#ffffff" },
+                    "shape": { "type": "circle", "stroke": { "width": 0, "color": "#000000" } },
+                    "opacity": { "value": 0.3, "random": true, "anim": { "enable": true, "speed": 1, "opacity_min": 0, "sync": false } },
+                    "size": { "value": 3, "random": true, "anim": { "enable": false } },
+                    "line_linked": { "enable": true, "distance": 150, "color": "#ffffff", "opacity": 0.2, "width": 1 },
+                    "move": { "enable": true, "speed": 1, "direction": "none", "random": true, "straight": false, "out_mode": "out", "bounce": false }
+                },
+                "interactivity": {
+                    "detect_on": "canvas",
+                    "events": { "onhover": { "enable": true, "mode": "grab" }, "onclick": { "enable": false }, "resize": true },
+                    "modes": {
+                        "grab": { "distance": 140, "line_linked": { "opacity": 0.5 } }
+                    }
+                },
+                "retina_detect": true
+            });
+
+            // --- Scroll Reveal Animation ---
+            const revealElements = document.querySelectorAll('.reveal');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            revealElements.forEach(el => {
+                observer.observe(el);
+            });
+
+            // --- Form Submission Handling (Mock) ---
+            const contactForm = document.getElementById('contact-form');
+            const formStatus = document.getElementById('form-status');
+
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    const name = document.getElementById('name').value;
+                    const email = document.getElementById('email').value;
+                    const subject = document.getElementById('subject').value;
+                    const message = document.getElementById('message').value;
+
+                    const mailtoUrl = `mailto:brendondgr@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent("From: " + name + " (" + email + ")\n\n" + message)}`;
+                    
+                    // Simple UX feedback
+                    const submitBtn = contactForm.querySelector('button[type="submit"]');
+                    const originalText = submitBtn.innerHTML;
+                    
+                    submitBtn.disabled = true;
+                    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> Opening Mail...';
+                    
+                    window.location.href = mailtoUrl;
+
+                    // Simulate completion
+                    setTimeout(() => {
+                        submitBtn.innerHTML = originalText;
+                        submitBtn.disabled = false;
+                        formStatus.classList.remove('hidden');
+                        
+                        setTimeout(() => {
+                            formStatus.classList.add('hidden');
+                        }, 5000);
+                    }, 1000);
+                });
+            }
+        });
+    </script>
+</body>
+</html>
